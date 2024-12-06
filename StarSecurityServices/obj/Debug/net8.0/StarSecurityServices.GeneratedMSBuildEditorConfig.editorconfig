@@ -26,24 +26,68 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\LAPTRINH\EprojectSem3\StarSecurityServices\StarSecurityServices
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Departments/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudHNcQ3JlYXRlLmNzaHRtbA==
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Department/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Departments/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudHNcRGVsZXRlLmNzaHRtbA==
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Department/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Departments/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudHNcRGV0YWlscy5jc2h0bWw=
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Department/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Departments/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudHNcRWRpdC5jc2h0bWw=
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Departments/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudHNcSW5kZXguY3NodG1s
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Employee/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Employee/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Role/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Views/Home/Index.cshtml]
@@ -69,6 +113,10 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-p77uicmwdl
 
 [D:/LAPTRINH/EprojectSem3/StarSecurityServices/StarSecurityServices/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

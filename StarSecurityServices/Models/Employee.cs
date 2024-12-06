@@ -8,9 +8,9 @@ namespace StarSecurityServices.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Required]
         public int Code { get; set; }
         public string Name { get; set; }
+        public string Avata { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }

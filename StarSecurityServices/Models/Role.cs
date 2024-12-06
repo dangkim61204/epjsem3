@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StarSecurityServices.Models
@@ -9,8 +10,9 @@ namespace StarSecurityServices.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
         public string Name { get; set; }
         public string? Description { get; set; }
-        public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<Employee>? Employees { get; set; }
     }
 }
