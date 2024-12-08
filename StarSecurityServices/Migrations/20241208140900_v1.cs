@@ -31,22 +31,6 @@ namespace StarSecurityServices.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Clients",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Company = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ServicesUsed = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AssignedStaff = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Clients", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Departments",
                 columns: table => new
                 {
@@ -74,6 +58,20 @@ namespace StarSecurityServices.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Services",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ServiceName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Services", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Vacancies",
                 columns: table => new
                 {
@@ -89,27 +87,6 @@ namespace StarSecurityServices.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Vacancies", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Services",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Category = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ServiceId = table.Column<int>(type: "int", nullable: false),
-                    ClientId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Services", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Services_Clients_ClientId",
-                        column: x => x.ClientId,
-                        principalTable: "Clients",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -148,6 +125,70 @@ namespace StarSecurityServices.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Clients",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ServiceId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Clients", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Clients_Services_ServiceId",
+                        column: x => x.ServiceId,
+                        principalTable: "Services",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ClientEmployees",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ClientId = table.Column<int>(type: "int", nullable: false),
+                    EmployeeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ClientEmployees", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ClientEmployees_Clients_ClientId",
+                        column: x => x.ClientId,
+                        principalTable: "Clients",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ClientEmployees_Employees_EmployeeId",
+                        column: x => x.EmployeeId,
+                        principalTable: "Employees",
+                        principalColumn: "Code",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ClientEmployees_ClientId",
+                table: "ClientEmployees",
+                column: "ClientId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ClientEmployees_EmployeeId",
+                table: "ClientEmployees",
+                column: "EmployeeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Clients_ServiceId",
+                table: "Clients",
+                column: "ServiceId");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Employees_DepartmentId",
                 table: "Employees",
@@ -157,11 +198,6 @@ namespace StarSecurityServices.Migrations
                 name: "IX_Employees_RoleId",
                 table: "Employees",
                 column: "RoleId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Services_ClientId",
-                table: "Services",
-                column: "ClientId");
         }
 
         /// <inheritdoc />
@@ -171,22 +207,25 @@ namespace StarSecurityServices.Migrations
                 name: "Branches");
 
             migrationBuilder.DropTable(
+                name: "ClientEmployees");
+
+            migrationBuilder.DropTable(
+                name: "Vacancies");
+
+            migrationBuilder.DropTable(
+                name: "Clients");
+
+            migrationBuilder.DropTable(
                 name: "Employees");
 
             migrationBuilder.DropTable(
                 name: "Services");
 
             migrationBuilder.DropTable(
-                name: "Vacancies");
-
-            migrationBuilder.DropTable(
                 name: "Departments");
 
             migrationBuilder.DropTable(
                 name: "Roles");
-
-            migrationBuilder.DropTable(
-                name: "Clients");
         }
     }
 }

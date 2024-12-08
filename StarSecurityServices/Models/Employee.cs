@@ -21,10 +21,14 @@ namespace StarSecurityServices.Models
         public string Password { get; set; }
 
         public int DepartmentId { get; set; }
-        public virtual Department? Department { get; set; }
+        public virtual Department? Department { get; set; }     
 
-        public int RoleId { get; set; }
+        public int RoleId { get; set; }     
         public virtual Role? Role { get; set; }
 
+        public virtual ICollection<ClientEmployee>? ClientEmployees { get; set; }
+        // Danh sách các nhân viên được chọn
+        //[Required(ErrorMessage = "Please select at least one employee.")]
+  
     }
 }

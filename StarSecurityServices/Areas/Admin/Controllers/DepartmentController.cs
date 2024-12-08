@@ -96,18 +96,35 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             return View(department);
         }
 
-   
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                return NotFound(new { message = "Department ID is required" });
             }
-            var department = await _context.Departments.SingleOrDefaultAsync(x => x.Id == id);
-            _context.Departments.Remove(department);
+
+            var dep = await _context.Departments
+                .Include(d => d.Employees)
+                .SingleOrDefaultAsync(d => d.Id == id);
+
+            if (dep == null)
+            {
+                return NotFound(new { message = "Department not found" });
+            }
+
+            // Kiểm tra xem Department có nhân viên liên kết hay không
+            if (dep.Employees != null && dep.Employees.Any())
+            {
+                return BadRequest(new { message = "Cannot delete department because it is associated with one or more employees" });
+            }
+
+            _context.Departments.Remove(dep);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+
+            return RedirectToAction("Index");
         }
+
 
 
         private bool DepartmentExists(int id)

@@ -3,80 +3,164 @@
   "WorkspaceRootPath": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\employee\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\employee\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\department\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\department\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\department\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\department\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\employee\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\employee\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\department\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\department\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\md5\\utilitie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\md5\\utilitie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\role\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\role\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\service\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\service\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\role\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\role\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\client\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\client\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\client\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\client\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\employee\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\employee\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\department\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\department\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\department\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\department\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\service\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\service\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241208153558_v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StarSecurityServices\\Migrations\\20241208153558_v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241208140900_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StarSecurityServices\\Migrations\\20241208140900_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241208135357_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StarSecurityServices\\Migrations\\20241208135357_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\clientemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\clientemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\connectdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\connectdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241207172947_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StarSecurityServices\\Migrations\\20241207172947_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241207172549_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StarSecurityServices\\Migrations\\20241207172549_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241207161235_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StarSecurityServices\\Migrations\\20241207161235_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\employee\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\employee\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\department\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\department\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\md5\\utilitie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\md5\\utilitie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,10 +173,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -111,20 +191,12 @@
       "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -137,10 +209,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\models\\branche.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\models\\branche.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|d:\\laptrinh\\eprojectsem3\\starsecurityservices\\starsecurityservices\\migrations\\20241206090431_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E31A64-B070-4CF4-81AF-CD209A441D3B}|StarSecurityServices\\StarSecurityServices.csproj|solutionrelative:starsecurityservices\\migrations\\20241206090431_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -150,7 +218,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -170,371 +238,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Details.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Details.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Details.cshtml*",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Details.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Service\\Create.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Service\\Create.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Service\\Create.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Service\\Create.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T17:40:29.94Z",
+              "WhenOpened": "2024-12-08T14:13:27.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Controllers\\EmployeeController.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwB8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T09:08:17.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Utilitie.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\MD5\\Utilitie.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\MD5\\Utilitie.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\MD5\\Utilitie.cs",
-              "RelativeToolTip": "StarSecurityServices\\Models\\MD5\\Utilitie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T16:31:19.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Create.cshtml",
               "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Create.cshtml",
               "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Create.cshtml",
               "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Create.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHgAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-06T09:11:30.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Employee.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\Employee.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Employee.cs",
-              "RelativeToolTip": "StarSecurityServices\\Models\\Employee.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwAkAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T09:03:21.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Index.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Index.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Index.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Index.cshtml",
-              "ViewState": "AgIAACAAAAAAAAAAAAAmwC0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T16:16:51.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T09:08:44.456Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Details.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Details.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Details.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T15:12:52.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Edit.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Edit.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Edit.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T18:59:24.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAwCcAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T13:20:57.335Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Role.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\Role.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Role.cs",
-              "RelativeToolTip": "StarSecurityServices\\Models\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T14:52:42.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Create.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Create.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Create.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T08:35:42.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T13:21:32.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T13:22:39.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T10:06:36.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DepartmentController.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\DepartmentController.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Controllers\\DepartmentController.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\DepartmentController.cs",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Controllers\\DepartmentController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAcwGMAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T09:41:34.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Edit.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Edit.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Edit.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T15:13:32.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAMMDAAAAAAAAAAAmwIADAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T10:02:34.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Department.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Department.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\Department.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Department.cs",
-              "RelativeToolTip": "StarSecurityServices\\Models\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T09:35:40.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "20241206090431_v1.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241206090431_v1.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Migrations\\20241206090431_v1.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241206090431_v1.cs",
-              "RelativeToolTip": "StarSecurityServices\\Migrations\\20241206090431_v1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T09:04:31.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\_ViewStart.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T19:37:17.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Program.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Program.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Program.cs",
-              "RelativeToolTip": "StarSecurityServices\\Program.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAIBJwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T09:43:44.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\_ViewStart.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T09:47:57.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T10:07:01.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T09:44:47.436Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "StarSecurityServices\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwA8AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T09:20:47.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T19:00:01.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T09:41:49.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\_ViewImports.cshtml",
@@ -547,33 +277,419 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\Shared\\Error.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Views\\Shared\\Error.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml*",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml*",
+              "ViewState": "AgIAABoBAAAAAAAAAAAwwB4BAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T09:59:37.749Z",
+              "WhenOpened": "2024-12-05T10:02:34.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Role\\Create.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Role\\Create.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Role\\Create.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Role\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T13:21:32.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Client\\Create.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Client\\Create.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Client\\Create.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Client\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T14:22:07.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Client\\Edit.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Client\\Edit.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Client\\Edit.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Client\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T14:22:34.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Edit.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Edit.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Edit.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T15:13:32.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Client\\Index.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Client\\Index.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Client\\Index.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Client\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T14:21:36.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T14:13:14.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Role\\Index.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Role\\Index.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Role\\Index.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Role\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T13:22:39.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T09:08:44.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Edit.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Edit.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Edit.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T18:59:24.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Create.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Create.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Create.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T08:35:42.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Index.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Index.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Index.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T16:16:51.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T10:06:36.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Service\\Edit.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Service\\Edit.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Service\\Edit.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Service\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T14:13:39.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Controllers\\ClientController.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Controllers\\ClientController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwBoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T14:21:08.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Client.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\Client.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Client.cs",
+              "RelativeToolTip": "StarSecurityServices\\Models\\Client.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T15:51:54.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20241208153558_v2.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241208153558_v2.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Migrations\\20241208153558_v2.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241208153558_v2.cs",
+              "RelativeToolTip": "StarSecurityServices\\Migrations\\20241208153558_v2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T15:35:59.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAYwJAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T14:12:57.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Controllers\\DepartmentController.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Controllers\\DepartmentController.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAuwHwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:41:34.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\Employee.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Employee.cs",
+              "RelativeToolTip": "StarSecurityServices\\Models\\Employee.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwB8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T09:03:21.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAqwK8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T09:08:17.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T10:07:01.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Controllers\\RoleController.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwEYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T13:20:57.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20241208140900_v1.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241208140900_v1.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Migrations\\20241208140900_v1.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241208140900_v1.cs",
+              "RelativeToolTip": "StarSecurityServices\\Migrations\\20241208140900_v1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T14:09:01.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "StarSecurityServices\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T09:59:38.715Z",
+              "Title": "Service.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\Service.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Service.cs",
+              "RelativeToolTip": "StarSecurityServices\\Models\\Service.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:46:57.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
+              "Title": "20241208135357_v1.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241208135357_v1.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Migrations\\20241208135357_v1.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241208135357_v1.cs",
+              "RelativeToolTip": "StarSecurityServices\\Migrations\\20241208135357_v1.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T13:53:57.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\Department.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Department.cs",
+              "RelativeToolTip": "StarSecurityServices\\Models\\Department.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T09:35:40.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ClientEmployee.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\ClientEmployee.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\ClientEmployee.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\ClientEmployee.cs",
+              "RelativeToolTip": "StarSecurityServices\\Models\\ClientEmployee.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:24:44.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\Role.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Role.cs",
+              "RelativeToolTip": "StarSecurityServices\\Models\\Role.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T14:52:42.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20241207172549_v1.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241207172549_v1.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Migrations\\20241207172549_v1.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241207172549_v1.cs",
+              "RelativeToolTip": "StarSecurityServices\\Migrations\\20241207172549_v1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:25:49.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ConnectDB.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\ConnectDB.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\ConnectDB.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\ConnectDB.cs",
+              "RelativeToolTip": "StarSecurityServices\\Models\\ConnectDB.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA8wBcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:09:21.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20241207172947_v1.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241207172947_v1.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Migrations\\20241207172947_v1.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241207172947_v1.cs",
+              "RelativeToolTip": "StarSecurityServices\\Migrations\\20241207172947_v1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:29:47.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\appsettings.json",
               "RelativeDocumentMoniker": "StarSecurityServices\\appsettings.json",
@@ -581,12 +697,167 @@
               "RelativeToolTip": "StarSecurityServices\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-05T09:48:02.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T09:48:02.341Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
+              "Title": "20241207161235_v1.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241207161235_v1.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Migrations\\20241207161235_v1.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Migrations\\20241207161235_v1.cs",
+              "RelativeToolTip": "StarSecurityServices\\Migrations\\20241207161235_v1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:12:36.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Details.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Details.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Details.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Employee\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T17:40:29.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Details.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Details.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\Department\\Details.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\Department\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T15:12:52.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Utilitie.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\MD5\\Utilitie.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Models\\MD5\\Utilitie.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\MD5\\Utilitie.cs",
+              "RelativeToolTip": "StarSecurityServices\\Models\\MD5\\Utilitie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T16:31:19.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T19:37:17.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Program.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Program.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Program.cs",
+              "RelativeToolTip": "StarSecurityServices\\Program.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAIBJwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:43:44.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T09:47:57.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T09:44:47.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "StarSecurityServices\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwA8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:20:47.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T19:00:01.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T09:41:49.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T09:59:37.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "StarSecurityServices\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "StarSecurityServices\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T09:59:38.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "StarSecurityServices\\ScaffoldingReadMe.txt",
@@ -594,24 +865,22 @@
               "RelativeToolTip": "StarSecurityServices\\ScaffoldingReadMe.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-12-05T09:55:11.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T09:55:11.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 50,
               "Title": "StarSecurityServices",
               "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
               "RelativeDocumentMoniker": "StarSecurityServices\\StarSecurityServices.csproj",
               "ToolTip": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
               "RelativeToolTip": "StarSecurityServices\\StarSecurityServices.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-05T09:33:52.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T09:33:52.735Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 51,
               "Title": "Branche.cs",
               "DocumentMoniker": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\Models\\Branche.cs",
               "RelativeDocumentMoniker": "StarSecurityServices\\Models\\Branche.cs",
@@ -619,8 +888,7 @@
               "RelativeToolTip": "StarSecurityServices\\Models\\Branche.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwBQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T09:21:06.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T09:21:06.146Z"
             }
           ]
         }

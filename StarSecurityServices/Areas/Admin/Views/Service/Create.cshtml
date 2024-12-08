@@ -1,11 +1,14 @@
-﻿@model StarSecurityServices.Models.Role
+﻿@model StarSecurityServices.Models.Service
 
 @{
-    ViewData["Title"] = "Role | Create";
+    ViewData["Title"] = "Service | Create";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Create Role</h1>
+<h1>Create Service</h1>
+
+
+
 
 
 <div class="row">
@@ -13,10 +16,10 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-                <span style="color:red;">@ViewBag.msg</span>
+                <label asp-for="ServiceName" class="control-label"></label>
+                <input asp-for="ServiceName" class="form-control" />
+                <span asp-validation-for="ServiceName" class="text-danger"></span>
+                 @* <span style="color:red;">@ViewBag.msg</span> *@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
@@ -30,4 +33,3 @@
         </form>
     </div>
 </div>
-

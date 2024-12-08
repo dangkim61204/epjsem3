@@ -10,10 +10,16 @@ namespace StarSecurityServices.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Company { get; set; }
-        public string ServicesUsed { get; set; }
-        public string AssignedStaff { get; set; }
+        public string? Email     { get; set; }
+        public string? Phone { get; set; }
+        public string? Address { get; set; }
+        // Khóa ngoại đến Service
 
-        public virtual ICollection<Service>  Services{ get; set; }
+        public int ServiceId { get; set; }
+        public virtual Service? Service { get; set; }
+        public virtual ICollection<ClientEmployee>? ClientEmployees { get; set; }
+
+        public List<int> EmployeeIds { get; set; } = new List<int>();
+
     }
 }

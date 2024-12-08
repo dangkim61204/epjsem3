@@ -12,7 +12,7 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Migrations
 {
     [DbContext(typeof(ConnectDB))]
-    [Migration("20241206090431_v1")]
+    [Migration("20241208140900_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -72,25 +72,50 @@ namespace StarSecurityServices.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AssignedStaff")
-                        .IsRequired()
+                    b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Company")
-                        .IsRequired()
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ServicesUsed")
-                        .IsRequired()
+                    b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ServiceId");
+
                     b.ToTable("Clients");
+                });
+
+            modelBuilder.Entity("StarSecurityServices.Models.ClientEmployee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ClientId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClientId");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("ClientEmployees");
                 });
 
             modelBuilder.Entity("StarSecurityServices.Models.Department", b =>
@@ -198,23 +223,14 @@ namespace StarSecurityServices.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ClientId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ServiceId")
-                        .HasColumnType("int");
+                    b.Property<string>("ServiceName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ClientId");
 
                     b.ToTable("Services");
                 });
@@ -252,6 +268,36 @@ namespace StarSecurityServices.Migrations
                     b.ToTable("Vacancies");
                 });
 
+            modelBuilder.Entity("StarSecurityServices.Models.Client", b =>
+                {
+                    b.HasOne("StarSecurityServices.Models.Service", "Service")
+                        .WithMany("Clients")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Service");
+                });
+
+            modelBuilder.Entity("StarSecurityServices.Models.ClientEmployee", b =>
+                {
+                    b.HasOne("StarSecurityServices.Models.Client", "Client")
+                        .WithMany("ClientEmployees")
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StarSecurityServices.Models.Employee", "Employee")
+                        .WithMany("ClientEmployees")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Client");
+
+                    b.Navigation("Employee");
+                });
+
             modelBuilder.Entity("StarSecurityServices.Models.Employee", b =>
                 {
                     b.HasOne("StarSecurityServices.Models.Department", "Department")
@@ -271,18 +317,9 @@ namespace StarSecurityServices.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("StarSecurityServices.Models.Service", b =>
-                {
-                    b.HasOne("StarSecurityServices.Models.Client", "Client")
-                        .WithMany("Services")
-                        .HasForeignKey("ClientId");
-
-                    b.Navigation("Client");
-                });
-
             modelBuilder.Entity("StarSecurityServices.Models.Client", b =>
                 {
-                    b.Navigation("Services");
+                    b.Navigation("ClientEmployees");
                 });
 
             modelBuilder.Entity("StarSecurityServices.Models.Department", b =>
@@ -290,9 +327,19 @@ namespace StarSecurityServices.Migrations
                     b.Navigation("Employees");
                 });
 
+            modelBuilder.Entity("StarSecurityServices.Models.Employee", b =>
+                {
+                    b.Navigation("ClientEmployees");
+                });
+
             modelBuilder.Entity("StarSecurityServices.Models.Role", b =>
                 {
                     b.Navigation("Employees");
+                });
+
+            modelBuilder.Entity("StarSecurityServices.Models.Service", b =>
+                {
+                    b.Navigation("Clients");
                 });
 #pragma warning restore 612, 618
         }

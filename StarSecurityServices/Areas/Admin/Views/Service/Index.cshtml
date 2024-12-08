@@ -1,12 +1,11 @@
-﻿@model IEnumerable<StarSecurityServices.Models.Role>
+﻿@model IEnumerable<StarSecurityServices.Models.Service>
 
 @{
-    ViewData["Title"] = "Role";
+    ViewData["Title"] = "Service";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>List of Roles</h1>
-
+<h1>List of Service</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-success">Create</a>
@@ -14,10 +13,11 @@
 <div class="row">
     <div class="col-xl-12">
         <div class="card">
-            
+          
 
             <div class="card-body">
 
+               
                 <div class="live-preview">
                     <div class="table-responsive table-card">
                         <table class="table align-middle table-nowrap table-striped-columns mb-0">
@@ -25,8 +25,10 @@
                                 <tr>
 
                                     <th>ID</th>
-                                    <th>Role</th>
+                                    <th>ServiceName</th>
+                                    <th>Description</th>
                                     <th>Action</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,11 +36,11 @@
                                 {
                                     <tr>
                                         <td><a href="#" class="fw-medium">@item.Id</a></td>
-                                        <td>@item.Name</td>
-
+                                        <td>@item.ServiceName</td>
+                                        <td>@item.Description</td>
                                         <td>
-                                            
-                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" onclick="return confirm('Do you want to delete the Role?')">Delete</a>
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" onclick="return confirm('Do you want to delete the Service?')">Delete</a>
                                         </td>
 
                                     </tr>

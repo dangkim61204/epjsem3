@@ -10,10 +10,9 @@ namespace StarSecurityServices.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Category { get; set; }
-        public string Description { get; set; }
+        public string ServiceName { get; set; }
+        public string? Description { get; set; }
 
-        public int ServiceId { get; set; }
-        public virtual Client? Client { get; set; }
+        public ICollection<Client>? Clients { get; set; }
     }
 }

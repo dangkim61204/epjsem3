@@ -83,14 +83,14 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
             //if (ModelState.IsValid)
             //{
-            Console.WriteLine(Utilitie.GetMD5HashData(employee.Password), "////");
+                Console.WriteLine(Utilitie.GetMD5HashData(employee.Password), "////");
             employee.Password = Utilitie.GetMD5HashData(employee.Password);
            
                 _context.Employees.Add(employee);
                 await _context.SaveChangesAsync();
-                //return RedirectToAction(nameof(Index));
+            //    return RedirectToAction(nameof(Index));
             //}
-          
+
             ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
             ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name", employee.RoleId);
             return View(employee);
@@ -111,8 +111,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Id", employee.DepartmentId);
-            ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Id", employee.RoleId);
+            ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
+            ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name", employee.RoleId);
             return View(employee);
         }
 
@@ -121,11 +121,21 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Code,Name,Avata,Address,Phone,Email,Education,Grade,Achievements,Username,Password,DepartmentId,RoleId")] Employee employee)
+        public async Task<IActionResult> Edit(int id, IFormFile? filePicture,  Employee employee)
         {
             if (id != employee.Code)
             {
                 return NotFound();
+            }
+            ////xu li upload
+            if (filePicture != null && filePicture.Length > 0)
+            {
+                string pathfile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", filePicture.FileName);
+                using (var stream = System.IO.File.Create(pathfile))
+                {
+                    await filePicture.CopyToAsync(stream);
+                }
+                employee.Avata = "/images/" + filePicture.FileName;
             }
 
             if (ModelState.IsValid)
@@ -146,10 +156,10 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index));
             }
-            ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Id", employee.DepartmentId);
-            ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Id", employee.RoleId);
+            ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
+            ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name", employee.RoleId);
             return View(employee);
         }
 
@@ -160,34 +170,13 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-
-            var employee = await _context.Employees
-                .Include(e => e.Department)
-                .Include(e => e.Role)
-                .FirstOrDefaultAsync(m => m.Code == id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-
-            return View(employee);
-        }
-
-        // POST: Admin/Employees/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var employee = await _context.Employees.FindAsync(id);
-            if (employee != null)
-            {
-                _context.Employees.Remove(employee);
-            }
-
+            var emp = await _context.Employees.SingleOrDefaultAsync(x => x.Code == id);
+            _context.Employees.Remove(emp);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
+     
         private bool EmployeeExists(int id)
         {
             return _context.Employees.Any(e => e.Code == id);

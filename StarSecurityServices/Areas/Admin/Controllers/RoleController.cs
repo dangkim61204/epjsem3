@@ -53,15 +53,29 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
         public async Task<IActionResult> Delete(int? id)
         {
-
             if (id == null)
             {
-                return NotFound();
+                return NotFound(new { message = "Role ID is required" });
             }
 
-            var role = await _context.Roles.SingleOrDefaultAsync(x => x.Id == id);
+            var role = await _context.Roles
+                .Include(d => d.Employees)
+                .SingleOrDefaultAsync(d => d.Id == id);
+
+            if (role == null)
+            {
+                return NotFound(new { message = "role not found" });
+            }
+
+            // Kiểm tra xem Department có nhân viên liên kết hay không
+            if (role.Employees != null && role.Employees.Any())
+            {
+                return BadRequest(new { message = "Cannot delete role because it is associated with one or more employees" });
+            }
+
             _context.Roles.Remove(role);
             await _context.SaveChangesAsync();
+
             return RedirectToAction("Index");
         }
 
