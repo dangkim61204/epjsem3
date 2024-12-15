@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
+    [Authorize]
     public class HomeController : Controller
     {
     

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Business_BLL.RoleSrv;
+using Business_BLL.ServiceSrv;
+using Data_DAL.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,145 +14,136 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
+
     public class ServiceController : Controller
     {
-        private readonly ConnectDB _context;
+        private readonly IService _serviceSrv;
 
-        public ServiceController(ConnectDB context)
+        public ServiceController(IService serviceSrv)
         {
-            _context = context;
-        }
+            _serviceSrv = serviceSrv;
+        }   
 
         // GET: Admin/Service
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Services.ToListAsync());
+            if (User.IsInRole("Admin"))
+            {
+                return View(await _serviceSrv.GetAll());
+            }
+            return View("View404");
         }
 
         // GET: Admin/Service/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
+            if (User.IsInRole("Admin"))
             {
-                return NotFound();
-            }
+                if (id == null)
+                {
+                    return NotFound();
+                }
 
-            var service = await _context.Services
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (service == null)
-            {
-                return NotFound();
-            }
+                var service = await _serviceSrv.GetById(id);
 
-            return View(service);
+                if (service == null)
+                {
+                    return NotFound();
+                }
+
+                return View(service);
+            }
+            return View("View404");
+          
         }
 
         // GET: Admin/Service/Create
         public IActionResult Create()
         {
-            return View();
+            if (User.IsInRole("Admin"))
+            {
+                return View();
+            }
+            return View("View404");
+            
         }
 
-        // POST: Admin/Service/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ServiceName,Description")] Service service)
+        public async Task<IActionResult> Create( Service service)
         {
-            if (ModelState.IsValid)
+            if (User.IsInRole("Admin"))
             {
-                _context.Add(service);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    await _serviceSrv.Add(service);
+
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(service);
             }
-            return View(service);
+            return View("View404");
+            
         }
 
         // GET: Admin/Service/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
+            if (User.IsInRole("Admin"))
             {
-                return NotFound();
-            }
+                if (id == null)
+                {
+                    return NotFound();
+                }
 
-            var service = await _context.Services.FindAsync(id);
-            if (service == null)
-            {
-                return NotFound();
+                var service = await _serviceSrv.GetById(id);
+                if (service == null)
+                {
+                    return NotFound();
+                }
+                return View(service);
             }
-            return View(service);
+            return View("View404");
+           
         }
 
-        // POST: Admin/Service/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+ 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ServiceName,Description")] Service service)
+        public async Task<IActionResult> Edit(int id, Service service)
         {
-            if (id != service.Id)
+            if (User.IsInRole("Admin"))
             {
-                return NotFound();
-            }
+                if (id != service.Id)
+                {
+                    return NotFound();
+                }
 
-            if (ModelState.IsValid)
-            {
-                try
+                if (ModelState.IsValid)
                 {
-                    _context.Update(service);
-                    await _context.SaveChangesAsync();
+
+                    await _serviceSrv.Update(service);
+
+                    return RedirectToAction(nameof(Index));
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ServiceExists(service.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                return View(service);
             }
-            return View(service);
+            return View("View404");
+            
         }
 
         // GET: Admin/Service/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
+            if (User.IsInRole("Admin"))
             {
-                return NotFound(new { message = "Service ID is required" });
+                await _serviceSrv.Delete(id);
+                return RedirectToAction("Index");
             }
+            return View("View404");
 
-            var Client = await _context.Services
-                .Include(d => d.Clients)
-                .SingleOrDefaultAsync(d => d.Id == id);
-
-            if (Client == null)
-            {
-                return NotFound(new { message = "Service not found" });
-            }
-
-            // Kiểm tra xem Department có nhân viên liên kết hay không
-            if (Client.Clients != null && Client.Clients.Any())
-            {
-                return BadRequest(new { message = "Cannot delete Service because it is associated with one or more Client" });
-            }
-
-            _context.Services.Remove(Client);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("Index");
-        }
-
-
-        private bool ServiceExists(int id)
-        {
-            return _context.Services.Any(e => e.Id == id);
+            
         }
     }
 }

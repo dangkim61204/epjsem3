@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Business_BLL.DepartmentSrv;
+using Business_BLL.RoleSrv;
+using Data_DAL.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,78 +14,68 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
+    
     public class RoleController : Controller
     {
-        private readonly ConnectDB _context;
+        private readonly IRole _roleService;
 
-        public RoleController(ConnectDB context)
+        public RoleController(IRole roleService)
         {
-            _context = context;
+            _roleService = roleService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var role = await _context.Roles.ToListAsync();
-            return View(role);
+            if (User.IsInRole("Admin")) 
+            {
+                var role = await _roleService.GetAll();
+                return View(role);
+            }
+            return View("View404");
+            
         }
 
         public IActionResult Create()
         {
-            return View();
+            if (User.IsInRole("Admin"))
+            {
+                return View();
+            }
+            return View("View404");
+            
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create( Role role)
+        public async Task<IActionResult> Create(Role role)
         {
-            var role1 = await _context.Roles.FirstOrDefaultAsync(x=>x.Name.Equals(role.Name));
-            if (role1 != null)
+
+            if (User.IsInRole("Admin"))
             {
-                ViewBag.msg = "Tên role đã tồn tại";
+                if (ModelState.IsValid)
+                {
+                    await _roleService.Add(role);
+                    return RedirectToAction("Index");
+                }
                 return View(role);
             }
-           
-            if (ModelState.IsValid)
+            return View("View404");
+            
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+
+            if (User.IsInRole("Admin"))
             {
-                _context.Add(role);
-                await _context.SaveChangesAsync();
+                await _roleService.Delete(id);
                 return RedirectToAction("Index");
             }
-           
-            return View(role);
+            return View("View404");
+            
         }
 
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound(new { message = "Role ID is required" });
-            }
-
-            var role = await _context.Roles
-                .Include(d => d.Employees)
-                .SingleOrDefaultAsync(d => d.Id == id);
-
-            if (role == null)
-            {
-                return NotFound(new { message = "role not found" });
-            }
-
-            // Kiểm tra xem Department có nhân viên liên kết hay không
-            if (role.Employees != null && role.Employees.Any())
-            {
-                return BadRequest(new { message = "Cannot delete role because it is associated with one or more employees" });
-            }
-
-            _context.Roles.Remove(role);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("Index");
-        }
-
-        private bool RoleExists(int id)
-        {
-            return _context.Roles.Any(e => e.Id == id);
-        }
+       
     }
 }

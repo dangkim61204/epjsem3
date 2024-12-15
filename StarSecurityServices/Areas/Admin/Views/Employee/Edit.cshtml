@@ -1,4 +1,4 @@
-﻿@model StarSecurityServices.Models.Employee
+﻿@model Data_DAL.Entities.Employee
 
 @{
     ViewData["Title"] = "Employee | Edit";
@@ -19,24 +19,26 @@
                 <div class="live-preview">
                     <form asp-action="Edit" enctype="multipart/form-data">
                         <div class="row">
+                            <input type="hidden" asp-for="Code" />
+
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <label asp-for="Name" class="form-label"></label>
+                                    <label asp-for="Name"></label>
                                     <input asp-for="Name" type="text" class="form-control" >
                                     <span asp-validation-for="Name" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label asp-for="Username" class="form-label"></label>
-                                    <input asp-for="Username" type="text" class="form-control" readonly>
+                                   
+                                    <input asp-for="Username" type="hidden" class="form-control" readonly>
                                     <span asp-validation-for="Username" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label asp-for="Password" class="form-label"></label>
-                                    <input  asp-for="Password" type="text" class="form-control" readonly>
+                                    
+                                    <input asp-for="Password" type="hidden" class="form-control" readonly>
                                     <span asp-validation-for="Password" class="text-danger"></span>
                                 </div>
                             </div>
@@ -103,14 +105,14 @@
                                 <div class="mb-3">
                                     <label asp-for="DepartmentId" class="form-label"></label>
 
-                                    <select asp-for="DepartmentId" class="form-control" asp-items="ViewBag.DepartmentId"></select>
+                                    <select asp-for="DepartmentId" class="form-control" asp-items="ViewBag.dep"></select>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label asp-for="RoleId" class="form-label"></label>
 
-                                    <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+                                    <select asp-for="RoleId" class="form-control" asp-items="ViewBag.role"></select>
                                 </div>
                             </div>
                             <!--end col-->

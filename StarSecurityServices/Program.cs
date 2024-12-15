@@ -1,7 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
-using StarSecurityServices.Models;
+﻿using Business_BLL.ClientSrv;
+using Business_BLL.DepartmentSrv;
+using Business_BLL.EmployeeSrv;
+using Business_BLL.RoleSrv;
+using Business_BLL.ServiceSrv;
+using Business_BLL.VacancieSrv;
+using Data_DAL.Entities;
+using Microsoft.CodeAnalysis.Operations;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -9,6 +19,38 @@ builder.Services.AddControllersWithViews();
 // Configure database context
 builder.Services.AddDbContext<ConnectDB>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Connect")));
+
+
+builder.Services.AddScoped<IDepartment, DepartmentService>();
+
+builder.Services.AddScoped<IRole, RoleService>();
+builder.Services.AddScoped<IEmployee, EmployeeService>();
+builder.Services.AddScoped<IService, ServiceService>();
+builder.Services.AddScoped<IClient, ClientService>();
+builder.Services.AddScoped<IVacancie, VacancieService>();
+
+
+
+
+//c?u hình xác th?c ng??i dùng b?ng Cookie
+builder.Services.AddAuthentication("CookieAuthenication").AddCookie("CookieAuthenication", options =>
+{
+    //ch? ra ???ng d?n c?m truy c?p m?c dù ?ã ??ng nh?p
+    //option.AccessDeniedPath = new PathString( "/Manager/Account");
+    options.Cookie = new CookieBuilder
+    {
+        HttpOnly = true,
+        Name = "c2208i",
+        Path = "/"
+    };
+
+    //ch? ??nh ???ng d?n
+    options.LoginPath = new PathString("/Admin/Login/Index");
+    options.ReturnUrlParameter = "UrlRedirect";
+    options.SlidingExpiration = true;
+
+
+});
 
 
 var app = builder.Build();

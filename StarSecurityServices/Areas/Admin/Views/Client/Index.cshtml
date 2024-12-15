@@ -1,5 +1,5 @@
-﻿@model IEnumerable<StarSecurityServices.Models.Client>
-
+﻿@model IEnumerable< Data_DAL.Entities.Client>
+@using Data_DAL.Entities
 @{
     ViewData["Title"] = "Client ";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -13,7 +13,9 @@
          
 
             <div class="card-body">
-
+                <p>
+                    <a asp-action="Create" class="btn btn-success">Create</a>
+                </p>
                 <div class="live-preview">
                     <div class="table-responsive">
                         <table class="table align-middle table-nowrap mb-0">
@@ -47,13 +49,19 @@
                                         <td>@item.Phone</td>
                                         <td>@item.Service.ServiceName</td>
                                         <td>
-                                            <!-- Hiển thị danh sách nhân viên của Client -->
-                                            <ul>
-                                                @foreach (var clientEmployee in item.ClientEmployees)
-                                                {
-                                                    <li>@clientEmployee.Employee.Name </li>
-                                                }
-                                            </ul>
+                                            @if (item.ClientEmployees != null && item.ClientEmployees.Any())
+                                            {
+                                                <ul>
+                                                    @foreach (ClientEmployee clientEmployee in item.ClientEmployees)
+                                                    {
+                                                        <li>@clientEmployee.Employee.Name</li>
+                                                    }
+                                                </ul>
+                                            }
+                                            else
+                                            {
+                                                <p>No employees linked to this client.</p>
+                                            }
                                         </td>
 
                                         <td>

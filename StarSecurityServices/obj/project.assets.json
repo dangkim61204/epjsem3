@@ -2796,6 +2796,34 @@
             "rid": "win"
           }
         }
+      },
+      "Business_BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Data_DAL": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.11"
+        },
+        "compile": {
+          "bin/placeholder/Business_BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Business_BLL.dll": {}
+        }
+      },
+      "Data_DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.11"
+        },
+        "compile": {
+          "bin/placeholder/Data_DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data_DAL.dll": {}
+        }
       }
     }
   },
@@ -7758,10 +7786,22 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Business_BLL/1.0.0": {
+      "type": "project",
+      "path": "../Business_BLL/Business_BLL.csproj",
+      "msbuildProject": "../Business_BLL/Business_BLL.csproj"
+    },
+    "Data_DAL/1.0.0": {
+      "type": "project",
+      "path": "../Data_DAL/Data_DAL.csproj",
+      "msbuildProject": "../Data_DAL/Data_DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Business_BLL >= 1.0.0",
+      "Data_DAL >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.11",
@@ -7774,11 +7814,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
+      "projectUniqueName": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\StarSecurityServices\\StarSecurityServices.csproj",
       "projectName": "StarSecurityServices",
-      "projectPath": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
+      "projectPath": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\StarSecurityServices\\StarSecurityServices.csproj",
       "packagesPath": "C:\\Users\\kimdang\\.nuget\\packages\\",
-      "outputPath": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\obj\\",
+      "outputPath": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\StarSecurityServices\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kimdang\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7795,7 +7835,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\Business_BLL\\Business_BLL.csproj": {
+              "projectPath": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\Business_BLL\\Business_BLL.csproj"
+            },
+            "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\Data_DAL\\Data_DAL.csproj": {
+              "projectPath": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\Data_DAL\\Data_DAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VnMoPABVm6U=",
+  "dgSpecHash": "ju9bShZoVow=",
   "success": true,
-  "projectFilePath": "D:\\LAPTRINH\\EprojectSem3\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
+  "projectFilePath": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\StarSecurityServices\\StarSecurityServices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kimdang\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\kimdang\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

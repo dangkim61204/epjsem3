@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Business_BLL.DepartmentSrv;
+using Business_BLL.EmployeeSrv;
+using Business_BLL.RoleSrv;
+using Data_DAL.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,175 +16,200 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
+    // [Authorize(Policy = "AdminStar")]
+    //[Authorize(Policy = "ManagerStar")]
     public class EmployeeController : Controller
     {
-        private readonly ConnectDB _context;
+        private readonly IEmployee _employeeService;
+        private readonly IDepartment _departmentService;
+        private readonly IRole _roleService;
 
-        public EmployeeController(ConnectDB context)
+
+        public EmployeeController(IEmployee employeeService, IDepartment departmentService, IRole roleService)
         {
-            _context = context;
+            _employeeService = employeeService;
+            _departmentService = departmentService;
+            _roleService = roleService;
+
+
         }
 
         // GET: Admin/Employees
         public async Task<IActionResult> Index()
         {
-            var connectDB = _context.Employees.Include(e => e.Department).Include(e => e.Role);
-            var emp = await connectDB.ToListAsync();
-            return View(emp);
+            if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+            {
+                var emp = await _employeeService.GetAll();
+                return View(emp);
+            }
+           return View("View404");
         }
 
         // GET: Admin/Employees/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
+            if (User.IsInRole("Admin") || User.IsInRole("Staff"))
             {
-                return NotFound();
-            }
+                if (id == null)
+                {
+                    return NotFound();
+                }
 
-            var employee = await _context.Employees
-                .Include(e => e.Department)
-                .Include(e => e.Role)
-                .FirstOrDefaultAsync(m => m.Code == id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
+                var employee = await _employeeService.GetById(id);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+                ViewBag.dep = new SelectList(await _departmentService.GetAll(), "Id", "Name");
+                ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
 
-            return View(employee);
+                return View(employee);
+            }
+            return View("View404");
+           
         }
 
         // GET: Admin/Employees/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name");
-            ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name");
-            return View();
+            if (User.IsInRole("Admin") )
+            {
+                ViewBag.dep = new SelectList(await _departmentService.GetAll(), "Id", "Name");
+                ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
+
+                return View();
+            }
+            return View("View404");
+           
         }
 
-        // POST: Admin/Employees/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create( Employee employee, IFormFile filePicture)
+        public async Task<IActionResult> Create(Employee employee, IFormFile? filePicture)
         {
-            if (filePicture != null && filePicture.Length > 0)
+            if (User.IsInRole("Admin"))
             {
-                string pathfile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", filePicture.FileName);
-                using (var stream = System.IO.File.Create(pathfile))
+                if (filePicture != null && filePicture.Length > 0)
                 {
-                    await filePicture.CopyToAsync(stream);
+                    try
+                    {
+
+                        string pathfile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", filePicture.FileName);
+
+
+                        using (var stream = new FileStream(pathfile, FileMode.Create))
+                        {
+                            await filePicture.CopyToAsync(stream);
+                        }
+
+
+                        employee.Avata = "/images/" + filePicture.FileName;
+                    }
+                    catch (Exception ex)
+                    {
+                        ModelState.AddModelError("", $"Lỗi khi lưu ảnh: {ex.Message}");
+                    }
                 }
-                employee.Avata = "/images/" + filePicture.FileName;
-            }
-            else
-            {
-                ViewBag.msg = "Ảnh không được trống";
-                ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
-                ViewData["RoleId"] = new SelectList(_context.Departments, "Id", "Name", employee.RoleId);
+                else
+                {
+                    ModelState.AddModelError("filePicture", "Ảnh không được trống");
+                }
+
+                if (ModelState.IsValid)
+                {
+                    try
+                    {
+
+                        await _employeeService.Add(employee);
+                        return RedirectToAction(nameof(Index));
+                    }
+                    catch (Exception ex)
+                    {
+                        ModelState.AddModelError("", $"Lỗi khi thêm nhân viên: {ex.Message}");
+                    }
+                }
+                ViewBag.dep = new SelectList(await _departmentService.GetAll(), "Id", "Name");
+                ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
                 return View(employee);
             }
+            return View("View404");
 
-
-            //if (ModelState.IsValid)
-            //{
-                Console.WriteLine(Utilitie.GetMD5HashData(employee.Password), "////");
-            employee.Password = Utilitie.GetMD5HashData(employee.Password);
-           
-                _context.Employees.Add(employee);
-                await _context.SaveChangesAsync();
-            //    return RedirectToAction(nameof(Index));
-            //}
-
-            ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
-            ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name", employee.RoleId);
-            return View(employee);
+          
         }
 
-
-
+  
         // GET: Admin/Employees/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
+            if (User.IsInRole("Admin"))
             {
-                return NotFound();
-            }
-
-            var employee = await _context.Employees.FindAsync(id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-            ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
-            ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name", employee.RoleId);
-            return View(employee);
-        }
-
-        // POST: Admin/Employees/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, IFormFile? filePicture,  Employee employee)
-        {
-            if (id != employee.Code)
-            {
-                return NotFound();
-            }
-            ////xu li upload
-            if (filePicture != null && filePicture.Length > 0)
-            {
-                string pathfile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", filePicture.FileName);
-                using (var stream = System.IO.File.Create(pathfile))
+                var employee = await _employeeService.GetById(id);
+                if (employee == null)
                 {
-                    await filePicture.CopyToAsync(stream);
+                    return NotFound();
                 }
-                employee.Avata = "/images/" + filePicture.FileName;
-            }
+                ViewBag.dep = new SelectList(await _departmentService.GetAll(), "Id", "Name");
+                ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(employee);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!EmployeeExists(employee.Code))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-            return RedirectToAction(nameof(Index));
+                return View(employee);
             }
-            ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
-            ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name", employee.RoleId);
-            return View(employee);
-        }
+            return View("View404");
 
-        // GET: Admin/Employees/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            var emp = await _context.Employees.SingleOrDefaultAsync(x => x.Code == id);
-            _context.Employees.Remove(emp);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            
+          
         }
 
      
-        private bool EmployeeExists(int id)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, IFormFile? filePicture, Employee employee)
         {
-            return _context.Employees.Any(e => e.Code == id);
+            if (User.IsInRole("Admin"))
+            {
+                if (id != employee.Code)
+                {
+                    return NotFound();
+                }
+
+                if (filePicture != null && filePicture.Length > 0)
+                {
+                    string pathfile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", filePicture.FileName);
+                    using (var stream = System.IO.File.Create(pathfile))
+                    {
+                        await filePicture.CopyToAsync(stream);
+                    }
+                    employee.Avata = "/images/" + filePicture.FileName;
+                }
+
+                if (ModelState.IsValid)
+                {
+
+                    await _employeeService.Update(employee);
+                    return RedirectToAction("Index");
+
+                }
+                ViewBag.dep = new SelectList(await _departmentService.GetAll(), "Id", "Name");
+                ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
+                return View(employee);
+            }
+            return View("View404");
+            
         }
+
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (User.IsInRole("Admin"))
+            {
+                await _employeeService.Delete(id);
+                return RedirectToAction("Index");
+            }
+            return View("View404");
+           
+        }
+
+
+
     }
 }

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Business_BLL.DepartmentSrv;
+using Business_BLL.ServiceSrv;
+using Data_DAL.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,126 +14,113 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
+
     public class DepartmentController : Controller
     {
-        private readonly ConnectDB _context;
+        private readonly IDepartment _departmentService;
+        private readonly IService _serviceEmployee;
 
-        public DepartmentController(ConnectDB context)
+
+        public DepartmentController(IDepartment departmentService , IService serviceEmployee)
         {
-            _context = context;
+            _departmentService = departmentService;
+            _serviceEmployee = serviceEmployee;
         }
 
- 
+
         public async Task<IActionResult> Index()
         {
-            var dep = await _context.Departments.ToListAsync();
-            return View(dep);
-        }
+            if (User.IsInRole("Admin"))
+            {
+                var dep = await _departmentService.GetAll();
+                return View(dep);
+            }
+        
+            return View("View404");
 
-   
+        }
 
         public IActionResult Create()
         {
-            return View();
+            if (User.IsInRole("Admin"))
+            {
+                return View();
+            }
+     
+            return View("View404");
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create( Department department)
+        public async Task<IActionResult> Create(Department department)
         {
-            if (ModelState.IsValid)
+
+            if (User.IsInRole("Admin"))
             {
-                _context.Add(department);
-                await _context.SaveChangesAsync();
+                if (ModelState.IsValid)
+                {
+                    await _departmentService.Add(department);
+                    return RedirectToAction("Index");
+                }
+                return View(department);
+            }
+            return View("View404");
+        }
+
+        // GET: Department/Edit/5
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            if (User.IsInRole("Admin"))
+            {
+               
+                var department = await _departmentService.GetById(id);
+                if (department == null)
+                {
+                    return NotFound();
+                }
+
+                return View(department);
+            }
+            return View("View404");
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Department department)
+        {
+
+            if (User.IsInRole("Admin"))
+            {
+
+                if (id != department.Id)
+                {
+                    return BadRequest();
+                }
+
+                if (ModelState.IsValid)
+                {
+                    await _departmentService.Update(department);
+                    return RedirectToAction(nameof(Index));
+                }
+
+                return View(department);
+            }
+            return View("View404");
+
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (User.IsInRole("Admin"))
+            {
+                await _departmentService.Delete(id);
                 return RedirectToAction("Index");
             }
-            return View(department);
+            return View("View404");
         }
 
-      
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var department = await _context.Departments.FindAsync(id);
-            if (department == null)
-            {
-                return NotFound();
-            }
-            return View(department);
-        }
-
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Department department)
-        {
-            if (id != department.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(department);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!DepartmentExists(department.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(department);
-        }
-
-
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound(new { message = "Department ID is required" });
-            }
-
-            var dep = await _context.Departments
-                .Include(d => d.Employees)
-                .SingleOrDefaultAsync(d => d.Id == id);
-
-            if (dep == null)
-            {
-                return NotFound(new { message = "Department not found" });
-            }
-
-            // Kiểm tra xem Department có nhân viên liên kết hay không
-            if (dep.Employees != null && dep.Employees.Any())
-            {
-                return BadRequest(new { message = "Cannot delete department because it is associated with one or more employees" });
-            }
-
-            _context.Departments.Remove(dep);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("Index");
-        }
-
-
-
-        private bool DepartmentExists(int id)
-        {
-            return _context.Departments.Any(e => e.Id == id);
-        }
+  
     }
 }
