@@ -26,6 +26,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\LAPTRINH\Eproject_sem3\epjsem3\StarSecurityServices
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/LAPTRINH/Eproject_sem3/epjsem3/StarSecurityServices/Areas/Admin/Views/Branche/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmNoZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/Eproject_sem3/epjsem3/StarSecurityServices/Areas/Admin/Views/Branche/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmNoZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/Eproject_sem3/epjsem3/StarSecurityServices/Areas/Admin/Views/Branche/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmNoZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/LAPTRINH/Eproject_sem3/epjsem3/StarSecurityServices/Areas/Admin/Views/Client/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xpZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
