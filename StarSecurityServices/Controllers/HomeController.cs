@@ -15,11 +15,55 @@ namespace StarSecurityServices.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Title = "Home";
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            ViewBag.Title = "About Us";
+            return View();
+        }
+
+        public IActionResult Business()
+        {
+            ViewBag.Title = "Our Business";
+            return View();
+        }
+
+        public IActionResult Careers()
+        {
+            ViewBag.Title = "Careers";
+            return View();
+        }
+
+        public IActionResult Clients()
+        {
+            ViewBag.Title = "Clients";
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            ViewBag.Title = "Contact";
+            return View();
+        }
+
+        public IActionResult Network()
+        {
+            ViewBag.Title = "Our Network";
+            return View();
+        }
+
+        public IActionResult Testimonials()
+        {
+            ViewBag.Title = "Testimonials";
             return View();
         }
 
         public IActionResult Privacy()
         {
+            ViewBag.Title = "Privacy";
             return View();
         }
 
