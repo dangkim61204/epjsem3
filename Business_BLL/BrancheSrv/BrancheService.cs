@@ -35,7 +35,8 @@ namespace Business_BLL.BrancheSrv
         }
         public async Task Add(Branche branche)
         {
-             _context.Branches.Add(branche);
+            
+            _context.Branches.Add(branche);
             await _context.SaveChangesAsync();
         }
 
@@ -60,7 +61,7 @@ namespace Business_BLL.BrancheSrv
         {
             if (id == null)
             {
-                throw new Exception("not found");
+                throw new Exception("Branche id not found");
             }
 
             var br = await _context.Branches.SingleOrDefaultAsync(x => x.Id == id);

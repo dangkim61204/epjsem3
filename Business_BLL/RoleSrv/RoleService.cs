@@ -48,12 +48,12 @@ namespace Business_BLL.RoleSrv
 
             if (role == null)
             {
-                throw new Exception("qqqqq");
+                throw new Exception("Role id not found");
             }
 
             if (role.Employees != null && role.Employees.Any())
             {
-                throw new Exception("ksfkf");
+                throw new Exception("The role's Employees list cannot contain elements.");
             }
 
             _context.Roles.Remove(role);

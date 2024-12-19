@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Business_BLL.ClientSrv
 {
@@ -18,12 +19,13 @@ namespace Business_BLL.ClientSrv
             _context = context;
         }
 
-        public async Task<IEnumerable<Client>> GetAll()
+        public async Task<IEnumerable<Client>> GetAll(int page = 1)
         {
+            int limit = 3;
             var client =  _context.Clients.Include(e => e.Service)
                                          .Include(x => x.ClientEmployees)
                                          .ThenInclude(s=>s.Employee);
-            var cli = await client.ToListAsync();
+            var cli = await client.ToPagedListAsync(page, limit);
             return cli;
         }
 
@@ -99,7 +101,7 @@ namespace Business_BLL.ClientSrv
             var emp = await _context.Clients.SingleOrDefaultAsync(x => x.Id == id);
             if (emp == null)
             {
-                throw new KeyNotFoundException("Client not found.");
+                throw new KeyNotFoundException("Client id not found.");
             }
             
             _context.Clients.Remove(emp);

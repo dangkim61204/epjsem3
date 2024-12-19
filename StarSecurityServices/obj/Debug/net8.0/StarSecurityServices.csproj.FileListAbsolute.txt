@@ -534,3 +534,7 @@ D:\LAPTRINH\Eproject_sem3\epjsem3\StarSecurityServices\obj\Debug\net8.0\refint\S
 D:\LAPTRINH\Eproject_sem3\epjsem3\StarSecurityServices\obj\Debug\net8.0\StarSecurityServices.pdb
 D:\LAPTRINH\Eproject_sem3\epjsem3\StarSecurityServices\obj\Debug\net8.0\StarSecurityServices.genruntimeconfig.cache
 D:\LAPTRINH\Eproject_sem3\epjsem3\StarSecurityServices\obj\Debug\net8.0\ref\StarSecurityServices.dll
+D:\LAPTRINH\Eproject_sem3\epjsem3\StarSecurityServices\bin\Debug\net8.0\X.PagedList.dll
+D:\LAPTRINH\Eproject_sem3\epjsem3\StarSecurityServices\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
+D:\LAPTRINH\Eproject_sem3\epjsem3\StarSecurityServices\obj\Debug\net8.0\StarSecurityServices.MvcApplicationPartsAssemblyInfo.cs
+D:\LAPTRINH\Eproject_sem3\epjsem3\StarSecurityServices\bin\Debug\net8.0\JetBrains.Annotations.dll

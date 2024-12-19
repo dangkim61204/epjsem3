@@ -63,19 +63,11 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <label asp-for="Description" class="form-label"></label>
-                                    <input asp-for="Description" type="text" class="form-control">
-                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                    < <label asp-for="Description" class="form-label"></label>
+                                    <textarea id="editor1" asp-for="Description" class="form-control" placeholder="Description..."></textarea>
                                 </div>
                             </div>
-                            <!--end col-->
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label asp-for="GoogleMap" class="form-label"></label>
-                                    <input asp-for="GoogleMap" type="text" class="form-control">
-                                    <span asp-validation-for="GoogleMap" class="text-danger"></span>
-                                </div>
-                            </div>
+                      
                           
                             <div class="col-lg-12">
                                 <div class="text-end">
@@ -156,3 +148,8 @@
 
 
 </div>
+@section Scripts {
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+}

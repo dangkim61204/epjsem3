@@ -26,11 +26,11 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }   
 
         // GET: Admin/Service
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page =1)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
-                return View(await _serviceSrv.GetAll());
+                return View(await _serviceSrv.GetAll(page));
             }
             return View("View404");
         }
@@ -38,7 +38,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // GET: Admin/Service/Details/5
         public async Task<IActionResult> Details(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 if (id == null)
                 {
@@ -61,7 +61,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // GET: Admin/Service/Create
         public IActionResult Create()
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+           
             {
                 return View();
             }
@@ -73,7 +74,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create( Service service)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 if (ModelState.IsValid)
                 {
@@ -90,7 +91,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // GET: Admin/Service/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 if (id == null)
                 {
@@ -113,7 +114,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Service service)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 if (id != service.Id)
                 {
@@ -136,7 +137,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // GET: Admin/Service/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 await _serviceSrv.Delete(id);
                 return RedirectToAction("Index");

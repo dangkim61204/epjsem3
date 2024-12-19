@@ -17,8 +17,8 @@ namespace Data_DAL.Entities
         public string Title { get; set; }
         public string Description { get; set; }
         public Boolean Status { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public float Quantity { get; set; }
 
 

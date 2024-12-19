@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Business_BLL.VacancieSrv
 {
@@ -18,9 +19,10 @@ namespace Business_BLL.VacancieSrv
         {
             _context = context;
         }
-        public async Task<IEnumerable<Vacancie>> GetAll()
+        public async Task<IEnumerable<Vacancie>> GetAll(int page = 1)
         {
-            return await _context.Vacancies.ToListAsync();
+            int limit = 3;
+            return await _context.Vacancies.ToPagedListAsync(page, limit);
         }
 
         public async Task<Vacancie> GetById(int id)
@@ -36,15 +38,19 @@ namespace Business_BLL.VacancieSrv
         }
         public async Task Add(Vacancie vacancie)
         {
-            _context.Vacancies.Add(vacancie);
-            await _context.SaveChangesAsync();
+           
+                _context.Vacancies.Add(vacancie);
+                await _context.SaveChangesAsync();
+           
+          
+            
         }
 
 
         public async Task Update(Vacancie vacancie)
         {
             var vac = await _context.Vacancies.FindAsync(vacancie.Id);
-            if (vac != null)
+            if (vac != null )
             {
                 vac.Title = vacancie.Title;
                 vac.Description = vacancie.Description;

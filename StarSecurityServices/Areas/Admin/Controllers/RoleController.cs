@@ -54,7 +54,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             if (User.IsInRole("Admin"))
             {
                 if (ModelState.IsValid)
-                {
+                {           
                     await _roleService.Add(role);
                     return RedirectToAction("Index");
                 }

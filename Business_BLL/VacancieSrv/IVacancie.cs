@@ -9,7 +9,7 @@ namespace Business_BLL.VacancieSrv
 {
     public interface IVacancie
     {
-        Task<IEnumerable<Vacancie>> GetAll();
+        Task<IEnumerable<Vacancie>> GetAll(int page);
         Task<Vacancie> GetById(int id);
         Task Add(Vacancie vacancie);
         Task Update(Vacancie vacancie);

@@ -28,7 +28,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // GET: Admin/Branche
         public async Task<IActionResult> Index()
         {
-            if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff"))
             {
                 var br = await _brancheService.GetAll();
                 return View(br);
@@ -37,33 +37,11 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             return View("View404");
         }
 
-        // GET: Admin/Branche/Details/5
-        //public async Task<IActionResult> Details(int? id)
-        //{
-        //    if (User.IsInRole("Admin") || User.IsInRole("Staff"))
-        //    {
-        //        if (id == null)
-        //        {
-        //            return NotFound();
-        //        }
-
-        //        var branche = await _context.Branches
-        //            .FirstOrDefaultAsync(m => m.Id == id);
-        //        if (branche == null)
-        //        {
-        //            return NotFound();
-        //        }
-
-        //        return View(branche);
-        //    }
-        //    return View("View404");
-            
-        //}
 
         // GET: Admin/Branche/Create
         public IActionResult Create()
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 return View();
             }
@@ -76,10 +54,11 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create( Branche branche)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager") )
             {
                 if (ModelState.IsValid)
                 {
+                    
                     await _brancheService.Add(branche);
                     return RedirectToAction(nameof(Index));
                 }
@@ -92,7 +71,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // GET: Admin/Branche/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
-            if (User.IsInRole("Admin") )
+            if (User.IsInRole("Admin") || User.IsInRole("Manager") )
             {
                 if (id == null)
                 {
@@ -114,7 +93,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id,  Branche branche)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager") )
             {
                 if (id != branche.Id)
                 {
@@ -135,7 +114,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager") )
             {
                 await _brancheService.Delete(id);
                 return RedirectToAction("Index");

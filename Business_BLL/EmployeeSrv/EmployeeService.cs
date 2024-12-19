@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 
 namespace Business_BLL.EmployeeSrv
@@ -21,10 +22,11 @@ namespace Business_BLL.EmployeeSrv
             _context = context;
         }
 
-        public async Task<IEnumerable<Employee>> GetAll()
+        public async Task<IEnumerable<Employee>> GetAll(int page =1)
         {
+            int limit = 3;
             var connectDB = _context.Employees.Include(e => e.Department).Include(e => e.Role);
-            var emp = await connectDB.ToListAsync();
+            var emp = await connectDB.ToPagedListAsync(page, limit);
             return emp;
         }
 
@@ -85,7 +87,7 @@ namespace Business_BLL.EmployeeSrv
         {
             if (id == null)
             {
-                throw new KeyNotFoundException("Employee not found.");
+                throw new KeyNotFoundException("Employee id not found.");
             }
             var emp = await _context.Employees.SingleOrDefaultAsync(x => x.Code == id);
             _context.Employees.Remove(emp);

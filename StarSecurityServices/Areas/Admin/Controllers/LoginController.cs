@@ -55,7 +55,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            ViewBag.err = "<div class='alert alert-danger'>Incorrect login information or you do not have access.b</div>";
+            ViewBag.err = "<div class='alert alert-danger'>Incorrect login information or you do not have access.</div>";
             return View();
         }
 

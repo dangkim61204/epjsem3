@@ -1,5 +1,5 @@
-﻿@model IEnumerable<Data_DAL.Entities.Vacancie>
-
+﻿@model X.PagedList.IPagedList<Data_DAL.Entities.Vacancie>
+@using X.PagedList.Mvc.Core;
 @{
     ViewData["Title"] = "Vacancie";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -215,3 +215,11 @@
         </div><!-- end card -->
     </div><!-- end col -->
 </div>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
+            new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+            LiElementClasses = new string[] { "page-item" },
+            PageClasses = new string[] { "page-link" }
+        }
+            )
