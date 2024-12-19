@@ -191,38 +191,78 @@
                     </div>
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                                 <span data-key="t-dashboards"> Department</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarDashboards">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a asp-controller="Department" asp-action="Index" class="nav-link">List Department </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a asp-controller="Department" asp-action="Create" class="nav-link"> Add Department </a>
-                                    </li>
-                                   
-                                </ul>
-                            </div>
-                        </li> <!-- end Dashboard Menu -->
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarDashboards4" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                                <span data-key="t-dashboards"> Role</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarDashboards4">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a asp-controller="Role" asp-action="Index" class="nav-link"> List Role </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a asp-controller="Role" asp-action="Create" class="nav-link"> Add Role </a>
-                                    </li>
+                   
+                            <li class="nav-item">
+                                <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                                    <span data-key="t-dashboards"> Department</span>
+                                </a>
 
-                                </ul>
-                            </div>
-                        </li> <!-- end Dashboard Menu -->
+                                <div class="collapse menu-dropdown" id="sidebarDashboards">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a asp-controller="Department" asp-action="Index" class="nav-link">List Department </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a asp-controller="Department" asp-action="Create" class="nav-link"> Add Department </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li> <!-- end Dashboard Menu -->
+                
+
+                     
+                            <li class="nav-item">
+                                <a class="nav-link menu-link" href="#sidebarDashboards4" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                                    <span data-key="t-dashboards"> Role</span>
+                                </a>
+                                <div class="collapse menu-dropdown" id="sidebarDashboards4">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a asp-controller="Role" asp-action="Index" class="nav-link"> List Role </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a asp-controller="Role" asp-action="Create" class="nav-link"> Add Role </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li> <!-- end Dashboard Menu -->
+                    
+                            <li class="nav-item">
+                                <a class="nav-link menu-link" href="#sidebarDashboards2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                                    <span data-key="t-dashboards"> Client</span>
+                                </a>
+                                <div class="collapse menu-dropdown" id="sidebarDashboards2">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a asp-controller="Client" asp-action="Index" class="nav-link">List Client </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a asp-controller="Client" asp-action="Create" class="nav-link"> Add Client </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link menu-link" href="#sidebarDashboards3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                                    <span data-key="t-dashboards"> Service</span>
+                                </a>
+                                <div class="collapse menu-dropdown" id="sidebarDashboards3">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a asp-controller="Service" asp-action="Index" class="nav-link">list Service </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a asp-controller="Service" asp-action="Create" class="nav-link"> Add Service </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                   
+                  
 
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarDashboards1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
@@ -241,38 +281,7 @@
                             </div>
                         </li> <!-- end Dashboard Menu -->
 
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarDashboards2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                                <span data-key="t-dashboards"> Client</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarDashboards2">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a asp-controller="Client" asp-action="Index" class="nav-link">List Client </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a asp-controller="Client" asp-action="Create" class="nav-link"> Add Client </a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </li> <!-- end Dashboard Menu -->
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarDashboards3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                                <span data-key="t-dashboards"> Service</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarDashboards3">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a asp-controller="Service" asp-action="Index" class="nav-link">list Service </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a asp-controller="Service" asp-action="Create" class="nav-link"> Add Service </a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </li> <!-- end Dashboard Menu -->
+                    
                      
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarDashboards5" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
@@ -289,7 +298,7 @@
 
                                 </ul>
                             </div>
-                        </li> <!-- end Dashboard Menu -->
+                        </li> 
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarDashboards6" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                                 <span data-key="t-dashboards"> Branche</span>

@@ -181,17 +181,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                     }
                     employee.Avata = "/images/" + filePicture.FileName;
                 }
-                //// Nếu là Manager, giữ nguyên Role ban đầu
-                //if (User.IsInRole("Manager"))
-                //{
-                //    var eplRole = await _employeeService.GetById(id);
-                //    if (eplRole == null)
-                //    {
-                //        return NotFound();
-                //    }
-                //    employee.RoleId = eplRole.RoleId; // Giữ Role cũ
-
-                //}
+           
 
                 if (ModelState.IsValid)
                 {
