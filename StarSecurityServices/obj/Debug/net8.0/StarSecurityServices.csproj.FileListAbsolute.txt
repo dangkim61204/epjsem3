@@ -787,10 +787,6 @@ D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\StarSecurityServices.M
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\StarSecurityServices.RazorAssemblyInfo.cache
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\StarSecurityServices.RazorAssemblyInfo.cs
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\StarSecurityServices.sourcelink.json
-D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css
-D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\scopedcss\bundle\StarSecurityServices.styles.css
-D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\scopedcss\projectbundle\StarSecurityServices.bundle.scp.css
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\staticwebassets.build.json
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\staticwebassets.development.json
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\staticwebassets\msbuild.StarSecurityServices.Microsoft.AspNetCore.StaticWebAssets.props
@@ -798,6 +794,10 @@ D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\staticwebassets\msbuil
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.StarSecurityServices.props
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.StarSecurityServices.props
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\staticwebassets.pack.json
+D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css
+D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\scopedcss\bundle\StarSecurityServices.styles.css
+D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\scopedcss\projectbundle\StarSecurityServices.bundle.scp.css
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\StarSecu.0B1D87E1.Up2Date
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\StarSecurityServices.dll
 D:\epj3_mau\epjsem3\StarSecurityServices\obj\Debug\net8.0\refint\StarSecurityServices.dll

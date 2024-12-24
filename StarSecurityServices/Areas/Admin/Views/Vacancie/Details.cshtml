@@ -2,50 +2,87 @@
 
 @{
     ViewData["Title"] = "Vacancie | Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h1>Details</h1>
 <div>
-<dl class="row">
-    <dt class="col-sm-2">
-        @Html.DisplayNameFor(model => model.Title)
-    </dt>
-    <dd class="col-sm-10">
-        @Html.DisplayFor(model => model.Title)
-    </dd>
-    <dt class="col-sm-2">
-        @Html.DisplayNameFor(model => model.Description)
-    </dt>
-    <dd class="col-sm-10">
-        @Html.DisplayFor(model => model.Description)
-    </dd>
-    <dt class="col-sm-2">
-        @Html.DisplayNameFor(model => model.Status)
-    </dt>
-    <dd class="col-sm-10">
-        @Html.DisplayFor(model => model.Status)
-    </dd>
-    <dt class="col-sm-2">
-        @Html.DisplayNameFor(model => model.StartDate)
-    </dt>
-    <dd class="col-sm-10">
-        @Html.DisplayFor(model => model.StartDate)
-    </dd>
-    <dt class="col-sm-2">
-        @Html.DisplayNameFor(model => model.EndDate)
-    </dt>
-    <dd class="col-sm-10">
-        @Html.DisplayFor(model => model.EndDate)
-    </dd>
-    <dt class="col-sm-2">
-        @Html.DisplayNameFor(model => model.Quantity)
-    </dt>
-    <dd class="col-sm-10">
-        @Html.DisplayFor(model => model.Quantity)
-    </dd>
-</dl>
-</div>
-<div>
-   
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div class="row">
+      
+        <div class="col-xxl-12">
+            <div class="card mt-xxl-n5">
+                <div class="card-header">
+                    <ul class="nav nav-tabs-custom rounded card-header-tabs border-bottom-0" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#personalDetails" role="tab">
+                                <i class="fas fa-home"></i> Detail Vacancie
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="card-body p-4">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="personalDetails" role="tabpanel">
+                            <form action="javascript:void(0);">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Title</label>
+                                            <input asp-for="Title" type="text" class="form-control"  readonly>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <!--end col-->
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Description</label>
+                                            <input asp-for="Description" type="text" class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">StartDate</label>
+                                            <input asp-for="StartDate" type="text" class="form-control"  readonly>
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">EndDate</label>
+                                            <input asp-for="EndDate" type="text" class="form-control"  readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Status</label>
+                                            <input type="text"
+                                                   class="form-control"
+                                                   value="@(Model.Status  ? "Đang tuyển" : "Không tuyển")"
+                                                   readonly />
+                                        </div>
+                                    </div>
+              
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Quantity</label>
+                                            <input asp-for="Quantity" type="number" class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                                <!--end row-->
+                            </form>
+                        </div>
+                        <!--end tab-pane-->
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end col-->
+    </div>
+    </div>

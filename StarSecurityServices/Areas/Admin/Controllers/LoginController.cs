@@ -30,7 +30,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                ViewBag.err = "<div class='alert alert-danger'>Tên đăng nhập hoặc mật khẩu không được để trống.</div>";
+                ViewBag.err = "<div class='alert alert-danger'>Username or password cannot be blank.</div>";
                 return View();
             }
 
@@ -55,7 +55,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            ViewBag.err = "<div class='alert alert-danger'>Thông tin đăng nhập sai hoặc bạn không có quyền truy cập.</div>";
+            ViewBag.err = "<div class='alert alert-danger'>Incorrect login information or you do not have access.b</div>";
             return View();
         }
 

@@ -291,6 +291,23 @@
                                 </ul>
                             </div>
                         </li> <!-- end Dashboard Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                                <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Management Branche</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarDashboards">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a asp-controller="Branche" asp-action="Index" class="nav-link"> List Branche </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a asp-controller="Branche" asp-action="Create" class="nav-link"> Add Branche </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li> <!-- end Dashboard Menu -->
+
 
 
 
