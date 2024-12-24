@@ -70,12 +70,12 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Client/Create
-        public async Task<IActionResult> Create(int page =1)
+        public async Task<IActionResult> Create()
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
-                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(page), "Id", "ServiceName");
-                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(page), "Code", "Name");
+                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "ServiceName");
+                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
                 return View();
             }
             return View("View404");
@@ -85,12 +85,12 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Client client, int[] emplyeeIds, int page =1)
+        public async Task<IActionResult> Create(Client client, int[] emplyeeIds)
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
-                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(page), "Id", "ServiceName");
-                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(page), "Code", "Name");
+                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "ServiceName");
+                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
 
                 if (ModelState.IsValid)
                 {
@@ -107,8 +107,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                     }
                 }
 
-                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(page), "Id", "ServiceName");
-                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(page), "Code", "Name");
+                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "ServiceName");
+                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
                 return View(client);
             }
             return View("View404");
@@ -119,7 +119,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
 
         // GET: Admin/Client/Edit/5
-        public async Task<IActionResult> Edit(int id, int page=1)
+        public async Task<IActionResult> Edit(int id)
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
@@ -133,8 +133,10 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 {
                     return NotFound();
                 }
-                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(page), "Id", "Name");
-                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(page), "code", "Name");
+    
+
+                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "ServiceName");
+                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
 
                 return View(client);
             }
@@ -144,7 +146,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Client client, int[] emplyeeIds, int page =1)
+        public async Task<IActionResult> Edit(int id, Client client, int[] employeeIds)
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
@@ -155,12 +157,14 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 if (ModelState.IsValid)
                 {
-                    await _clientService.Update(client, emplyeeIds);
+                    await _clientService.Update(client, employeeIds);
 
                     return RedirectToAction(nameof(Index));
                 }
-                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(page), "Id", "Name");
-                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(page), "code", "Name");
+          
+
+                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "ServiceName");
+                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
 
                 return View(client);
             }

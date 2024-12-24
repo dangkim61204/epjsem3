@@ -30,7 +30,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
-                return View(await _serviceSrv.GetAll(page));
+                return View(await _serviceSrv.GetAllpage(page));
             }
             return View("View404");
         }

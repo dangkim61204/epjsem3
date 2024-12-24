@@ -54,17 +54,17 @@
                                 <div class="mb-3">
                                     <label asp-for="ServiceId" class="form-label"></label>
 
-                                    <select asp-for="ServiceId" class="form-control" asp-items="ViewBag.ServiceId"></select>
+                                    <select asp-for="ServiceId" class="form-control" asp-items=" ViewBag.serviceId"></select>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <label class="form-label">Emplyee select</label>
+                              <div class="col-md-12">
+                                  <div class="mb-3">
+                                      <label class="form-label">Emplyee select</label>
 
-                                    <select name="emplyeeIds" class="form-control" asp-items="ViewBag.EmployeeSelectList" multiple="multiple"></select>
-                                </div>
-                            </div>
-                           
+                                    <select name="employeeIds" class="form-control" asp-items="ViewBag.EmployeeSelectList" multiple="multiple"></select>
+                                  </div>
+                              </div>
+                            
                             <div class="col-lg-12">
                                 <div class="text-end">
                                     <button type="submit" class="btn btn-primary">Update</button>

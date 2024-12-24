@@ -22,13 +22,20 @@ namespace Business_BLL.EmployeeSrv
             _context = context;
         }
 
-        public async Task<IEnumerable<Employee>> GetAll(int page =1)
+        public async Task<IEnumerable<Employee>> GetAll()
         {
-            int limit = 3;
+            var connectDB = _context.Employees.Include(e => e.Department).Include(e => e.Role);
+            var emp = await connectDB.ToListAsync();
+            return emp;
+        }
+        public async Task<IEnumerable<Employee>> GetAllpage(int page =1)
+        {
+            int limit = 10;
             var connectDB = _context.Employees.Include(e => e.Department).Include(e => e.Role);
             var emp = await connectDB.ToPagedListAsync(page, limit);
             return emp;
         }
+       
 
         public async Task<Employee> GetById(int id)
         {
@@ -94,6 +101,7 @@ namespace Business_BLL.EmployeeSrv
             await _context.SaveChangesAsync();
             
         }
-        
+
+     
     }
 }

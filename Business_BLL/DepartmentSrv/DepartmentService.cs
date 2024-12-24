@@ -22,14 +22,19 @@ namespace Business_BLL.DepartmentSrv
         }
 
         //list
-        public async Task<IEnumerable<Department>> GetAll(int page = 1)
+        public async Task<IEnumerable<Department>> GetAll()
         {
-            int limit = 3;
-            return  await _context.Departments.OrderBy(x => x.Id).ToPagedListAsync(page, limit);
+            
+            return  await _context.Departments.ToListAsync();
  
      
         }
 
+        public async Task<IEnumerable<Department>> GetAllpage(int page = 1)
+        {
+            int limit = 5;
+            return await _context.Departments.OrderBy(x => x.Id).ToPagedListAsync(page, limit);
+        }
         //getById
         public async Task<Department> GetById(int id)
         {
@@ -90,6 +95,6 @@ namespace Business_BLL.DepartmentSrv
 
         }
 
-     
+        
     }
 }

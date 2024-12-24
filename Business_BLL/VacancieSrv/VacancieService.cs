@@ -21,7 +21,7 @@ namespace Business_BLL.VacancieSrv
         }
         public async Task<IEnumerable<Vacancie>> GetAll(int page = 1)
         {
-            int limit = 3;
+            int limit = 8;
             return await _context.Vacancies.ToPagedListAsync(page, limit);
         }
 

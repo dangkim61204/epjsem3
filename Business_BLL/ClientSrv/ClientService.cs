@@ -21,7 +21,7 @@ namespace Business_BLL.ClientSrv
 
         public async Task<IEnumerable<Client>> GetAll(int page = 1)
         {
-            int limit = 3;
+            int limit = 8;
             var client =  _context.Clients.Include(e => e.Service)
                                          .Include(x => x.ClientEmployees)
                                          .ThenInclude(s=>s.Employee);
@@ -71,27 +71,51 @@ namespace Business_BLL.ClientSrv
 
         }
 
-        public async Task Update(Client client, int[] emplyeeIds)
+        public async Task Update(Client client, int[] employeeIds)
         {
             var Cli = await _context.Clients.FindAsync(client.Id);
-           
-                //_context.Clients.Update(Cli);
-                //await _context.SaveChangesAsync();
-            foreach (var employeeCode in emplyeeIds)
+            if (Cli == null)
             {
-                var employee = await _context.Employees
-                    .FirstOrDefaultAsync(e => e.Code == employeeCode);
-
-                if (employee != null)
-                {
-                    var clientEmployee = new ClientEmployee
-                    {
-                        ClientId = client.Id,
-                        EmployeeId = employee.Code  
-                    };
-                    _context.clientEmployees.Update(clientEmployee);  
-                }
+                throw new Exception("Client does not exist.");
             }
+           
+            Cli.Name = client.Name; 
+            Cli.Email = client.Email;
+            Cli.Phone = client.Phone;
+            Cli.Service = client.Service;
+
+            _context.Clients.Update(Cli);
+            await _context.SaveChangesAsync();
+
+            // Lấy danh sách ClientEmployee hiện tại
+            var ClientEmployees = _context.clientEmployees
+                .Where(ce => ce.ClientId == client.Id)
+                .ToList();
+
+            // Xóa những Employee không còn trong danh sách mới
+            var toRemove = ClientEmployees
+                .Where(ce => !employeeIds.Contains(ce.EmployeeId))
+                .ToList();
+
+            _context.clientEmployees.RemoveRange(toRemove);
+
+
+            var distinctEmployeeIds = employeeIds.Distinct();
+            foreach (var employeeCode in distinctEmployeeIds)
+            {
+                    var employee = await _context.Employees
+                        .FirstOrDefaultAsync(e => e.Code == employeeCode);
+
+                    if (employee != null && !ClientEmployees.Any(ce => ce.EmployeeId == employee.Code))
+                    {
+                        var clientEmployee = new ClientEmployee
+                        {
+                            ClientId = client.Id,
+                            EmployeeId = employee.Code
+                        };
+                        _context.clientEmployees.Add(clientEmployee); // Thêm mới
+                    }
+                }
             await _context.SaveChangesAsync();  
 
         }

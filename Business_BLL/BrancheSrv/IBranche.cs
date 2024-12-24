@@ -9,7 +9,7 @@ namespace Business_BLL.BrancheSrv
 {
     public interface IBranche
     {
-        Task<IEnumerable<Branche>> GetAll();
+        Task<IEnumerable<Branche>> GetAll(int page);
         Task<Branche> GetById(int id);
         Task Add(Branche branche);
         Task Update(Branche branche);

@@ -9,7 +9,9 @@ namespace Business_BLL.ServiceSrv
 {
     public interface IService
     {
-        Task<IEnumerable<Service>> GetAll(int page);
+        Task<IEnumerable<Service>> GetAll();
+        Task<IEnumerable<Service>> GetAllpage(int page);
+
         Task<Service> GetById(int id);
         Task Add(Service service);
         Task Update(Service service);

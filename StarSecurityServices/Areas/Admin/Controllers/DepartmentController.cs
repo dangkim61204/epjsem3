@@ -33,7 +33,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
-                var dep = await _departmentService.GetAll(page);
+                var dep = await _departmentService.GetAllpage(page);
                 return View(dep);
             }
         

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Business_BLL.BrancheSrv
 {
@@ -17,9 +18,10 @@ namespace Business_BLL.BrancheSrv
         {
             _context = context;
         }
-        public async Task<IEnumerable<Branche>> GetAll()
+        public async Task<IEnumerable<Branche>> GetAll(int page = 1)
         {
-            return await _context.Branches.ToListAsync();
+            int limit = 8;
+            return await _context.Branches.ToPagedListAsync(page, limit);
         }
 
         public async Task<Branche> GetById(int id)

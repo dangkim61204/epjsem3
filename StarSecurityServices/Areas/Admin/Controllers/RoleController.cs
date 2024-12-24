@@ -25,11 +25,11 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             _roleService = roleService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page =1)
         {
             if (User.IsInRole("Admin")) 
             {
-                var role = await _roleService.GetAll();
+                var role = await _roleService.GetAllpage(page);
                 return View(role);
             }
             return View("View404");
