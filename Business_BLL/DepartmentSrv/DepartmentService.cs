@@ -33,7 +33,8 @@ namespace Business_BLL.DepartmentSrv
         public async Task<IEnumerable<Department>> GetAllpage(int page = 1)
         {
             int limit = 5;
-            return await _context.Departments.OrderBy(x => x.Id).ToPagedListAsync(page, limit);
+            return await _context.Departments.OrderByDescending(b => b.Id)
+                .ToPagedListAsync(page, limit); ;
         }
         //getById
         public async Task<Department> GetById(int id)

@@ -25,7 +25,8 @@ namespace Business_BLL.RoleSrv
         public async Task<IEnumerable<Role>> GetAllpage(int page=1)
         {
             int limit = 4;
-            return await _context.Roles.OrderBy(x => x.Id).ToPagedListAsync(page, limit);
+            return await _context.Roles.OrderByDescending(b => b.Id)
+                .ToPagedListAsync(page, limit);
         }
         public async Task<Role> GetById(int id)
         {

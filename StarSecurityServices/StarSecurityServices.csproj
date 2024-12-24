@@ -33,10 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Business_BLL\Business_BLL.csproj" />
     <ProjectReference Include="..\Data_DAL\Data_DAL.csproj" />
   </ItemGroup>

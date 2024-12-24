@@ -28,7 +28,8 @@ namespace Business_BLL.ServiceSrv
         public async Task<IEnumerable<Service>> GetAllpage(int page = 1)
         {
             int limit = 8;
-            return await _context.Services.ToPagedListAsync(page, limit);
+            return await _context.Services.OrderByDescending(b => b.Id)
+                .ToPagedListAsync(page, limit);
         }
 
        

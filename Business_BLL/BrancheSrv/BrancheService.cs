@@ -18,10 +18,16 @@ namespace Business_BLL.BrancheSrv
         {
             _context = context;
         }
-        public async Task<IEnumerable<Branche>> GetAll(int page = 1)
+        public async  Task<IEnumerable<Branche>> GetAll(int page = 1)
         {
-            int limit = 8;
-            return await _context.Branches.ToPagedListAsync(page, limit);
+            int limit = 8; 
+
+            
+            var branches = await  _context.Branches
+                .OrderByDescending(b => b.Id) 
+                .ToPagedListAsync(page, limit); 
+
+            return branches;
         }
 
         public async Task<Branche> GetById(int id)

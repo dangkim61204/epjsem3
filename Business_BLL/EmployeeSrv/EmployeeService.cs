@@ -32,7 +32,8 @@ namespace Business_BLL.EmployeeSrv
         {
             int limit = 10;
             var connectDB = _context.Employees.Include(e => e.Department).Include(e => e.Role);
-            var emp = await connectDB.ToPagedListAsync(page, limit);
+            var emp = await connectDB.OrderByDescending(b => b.Code)
+                .ToPagedListAsync(page, limit); 
             return emp;
         }
        

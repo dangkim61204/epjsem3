@@ -25,7 +25,7 @@ namespace Business_BLL.ClientSrv
             var client =  _context.Clients.Include(e => e.Service)
                                          .Include(x => x.ClientEmployees)
                                          .ThenInclude(s=>s.Employee);
-            var cli = await client.ToPagedListAsync(page, limit);
+            var cli = await client.OrderByDescending(b => b.Id).ToPagedListAsync(page, limit); ;
             return cli;
         }
 

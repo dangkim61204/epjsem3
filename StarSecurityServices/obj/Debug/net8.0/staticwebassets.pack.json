@@ -3393,6 +3393,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\StarSecurityServices\\wwwroot\\images\\admin.jpg",
+      "PackagePath": "staticwebassets\\images\\admin.jpg"
+    },
+    {
       "Id": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\StarSecurityServices\\wwwroot\\images\\e1.jpg",
       "PackagePath": "staticwebassets\\images\\e1.jpg"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VW7yTJxelreTAfhXroHLXVExwTylgx3Lb//9Ig+pukQ=",
+  "Hash": "eE5/1Oyi+lqmAI+ppevo1hN9YX+y8QT00e5T7kAkqD4=",
   "Source": "StarSecurityServices",
   "BasePath": "_content/StarSecurityServices",
   "Mode": "Default",
@@ -16146,6 +16146,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\StarSecurityServices\\wwwroot\\images\\admin.jpg",
+      "SourceId": "StarSecurityServices",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\StarSecurityServices\\wwwroot\\",
+      "BasePath": "_content/StarSecurityServices",
+      "RelativePath": "images/admin.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\admin.jpg"
     },
     {
       "Identity": "D:\\LAPTRINH\\Eproject_sem3\\epjsem3\\StarSecurityServices\\wwwroot\\images\\e1.jpg",

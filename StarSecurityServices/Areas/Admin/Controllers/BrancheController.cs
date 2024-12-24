@@ -58,7 +58,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    
+                  
                     await _brancheService.Add(branche);
                     return RedirectToAction(nameof(Index));
                 }
