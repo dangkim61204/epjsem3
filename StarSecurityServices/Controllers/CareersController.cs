@@ -19,7 +19,9 @@ namespace StarSecurityServices.Controllers
 		public async Task<IActionResult> Index(int page =1)
 		{
 			ViewBag.Title = "Careers";
-			return View(await _vacancieService.GetAll(page));
+			//return View(await _vacancieService.GetAll(page));
+			return View(await _vacancieService.GetAllPage());
+
 		}
 
 		public async Task<IActionResult> Details(int id, int page =1)
@@ -40,18 +42,18 @@ namespace StarSecurityServices.Controllers
 			{
 				return NotFound();
 			}
-			var vacancies = await _vacancieService.GetAll(page =1);
+			var vacancies = await _vacancieService.GetAllPage();
 			ViewBag.firstFiveVacancies = vacancies.Take(4);
 			// Return the Vacancie object directly to the View
 			return View(vacancie);
 		}
-		public async Task<IActionResult> Browse(int page =1)
+		public async Task<IActionResult> Browse()
 		{
 			ViewBag.Title = "Browse Companies";
-			return View(await _vacancieService.GetAll(page));
+			return View(await _vacancieService.GetAllPage());
 		}
 		[HttpPost]
-		public async Task<IActionResult> Search(string Title, int pageNumber = 1, int pageSize = 10, int page =1)
+		public async Task<IActionResult> Search(string Title, int pageNumber = 1, int pageSize = 10)
 		{
 			ViewBag.Title = "Careers";
 
@@ -62,7 +64,7 @@ namespace StarSecurityServices.Controllers
 			}
 
 			// Fetch all vacancies first
-			var vacancies = await _vacancieService.GetAll(page);
+			var vacancies = await _vacancieService.GetAllPage();
 
 			// Filter vacancies based on the title
 			var filteredVacancies = vacancies

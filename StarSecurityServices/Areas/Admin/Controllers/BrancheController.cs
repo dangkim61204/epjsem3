@@ -34,7 +34,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 return View(br);
             }
 
-            return View("View404");
+            return View("View403");
         }
 
 
@@ -45,7 +45,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 return View();
             }
-            return View("View404");
+            return View("View403");
           
         }
 
@@ -64,7 +64,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return View(branche);
             }
-            return View("View404");
+            return View("View403");
             
         }
 
@@ -85,7 +85,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return View(branche);
             }
-            return View("View404");
+            return View("View403");
             
         }
 
@@ -108,7 +108,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return View(branche);
             }
-            return View("View404");
+            return View("View403");
             
         }
 
@@ -119,7 +119,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 await _brancheService.Delete(id);
                 return RedirectToAction("Index");
             }
-            return View("View404");
+            return View("View403");
 
         }
     }

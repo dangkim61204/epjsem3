@@ -40,7 +40,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 .Include(e => e.Role)
                 .FirstOrDefault(x => x.Username == username && x.Password == md5pass);
 
-            if (emp != null && emp.Role != null)
+            if (emp != null && emp.Role != null && string.Equals(emp.Username, username, StringComparison.Ordinal))
             {
                 var identity = new ClaimsIdentity(new[]
                 {

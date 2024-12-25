@@ -42,7 +42,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 var emp = await _employeeService.GetAllpage(page);
                 return View(emp);
             }
-           return View("View404");
+           return View("View403");
         }
 
         // GET: Admin/Employees/Details/5
@@ -65,7 +65,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(employee);
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -79,7 +79,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View();
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -132,7 +132,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
                 return View(employee);
             }
-            return View("View404");
+            return View("View403");
 
           
         }
@@ -154,7 +154,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(employee);
             }
-            return View("View404");
+            return View("View403");
 
             
           
@@ -204,7 +204,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
            
                 return View(employee);
             }
-            return View("View404");
+            return View("View403");
             
         }
 
@@ -216,7 +216,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 await _employeeService.Delete(id);
                 return RedirectToAction("Index");
             }
-            return View("View404");
+            return View("View403");
            
         }
 

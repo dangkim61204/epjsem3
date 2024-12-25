@@ -77,11 +77,7 @@ namespace Business_BLL.EmployeeSrv
                 emp.Grade = employee.Grade;
                 emp.Education = employee.Education;
                 emp.DepartmentId = employee.DepartmentId;
-                emp.Username = employee.Username;
-                if (!string.IsNullOrEmpty(employee.Password))
-                {
-                    emp.Password = Utilitie.GetMD5HashData(employee.Password);
-                }
+              
 
                 await _context.SaveChangesAsync();
 

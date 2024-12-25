@@ -38,26 +38,25 @@
 				<div class="utf-boxed-list-headline-item">
 					<h3><i class="icon-material-outline-description"></i> Jobs Description</h3>
 				</div>
-				<p>@Model.Description</p>
-				<ul class="utf-job-deatails-content-item margin-bottom-30">
-					<li><i class="icon-feather-arrow-right"></i> Morbi mattis ullamcorper velit. Phasellus gravida semper nisi nullam vel sem.</li>
-					<li><i class="icon-feather-arrow-right"></i> Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.</li>
-					<li><i class="icon-feather-arrow-right"></i> Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</li>
-					<li><i class="icon-feather-arrow-right"></i> Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis.</li>
-					<li><i class="icon-feather-arrow-right"></i> Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu.</li>
-					<li><i class="icon-feather-arrow-right"></i> Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis.</li>
-					<li><i class="icon-feather-arrow-right"></i> Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi.</li>
-					<li><i class="icon-feather-arrow-right"></i> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</li>
-				</ul>
+				<b>Job:</b>@Model.Title
+				<br />
+				<b>Description:</b>@Model.Description
+				<br />
+				<b>Number of recruitment:</b> @Model.Quantity
+				<br />
+				<b>StartDate:</b>@Model.StartDate
+				<br />
+				<b>EndDate:</b>@Model.EndDate
+				
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-sm-12">
-						<a href="#small-dialog" class="apply-now-button popup-with-zoom-anim margin-top-0">Apply Now <i class="icon-feather-chevron-right"></i></a>
+						<a asp-action="Details" asp-controller="Careers" class="apply-now-button popup-with-zoom-anim margin-top-0">Apply Now <i class="icon-feather-chevron-right"></i></a>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-sm-12">
-						<a href="#" class="button save-job-btn">Get Job Alerts <i class="icon-feather-chevron-right"></i></a>
+						<a asp-action="Details" asp-controller="Careers"  class="button save-job-btn">Get Job Alerts <i class="icon-feather-chevron-right"></i></a>
 					</div>
 				</div>
-				<div class="utf-detail-social-sharing margin-top-25">
+				@* <div class="utf-detail-social-sharing margin-top-25">
 					<span><strong>Social Sharing:-</strong></span>
 					<ul class="margin-top-15">
 						<li><a href="#" title="Facebook" data-tippy-placement="top"><i class="icon-brand-facebook-f"></i></a></li>
@@ -67,7 +66,7 @@
 						<li><a href="#" title="Whatsapp" data-tippy-placement="top"><i class="icon-brand-whatsapp"></i></a></li>
 						<li><a href="#" title="Pinterest" data-tippy-placement="top"><i class="icon-brand-pinterest-p"></i></a></li>
 					</ul>
-				</div>
+				</div> *@
 			</div>
 			<div class="utf-single-page-section-aera">
 				<div class="utf-boxed-list-headline-item">
@@ -92,7 +91,7 @@
 				<div class="utf-listings-container-part compact-list-layout">
 					@foreach (var item in ViewBag.firstFiveVacancies)
 					{
-						<a href="single-job-page.html" class="utf-job-listing">
+						<a asp-action="Details" asp-controller="Careers" asp-route-id="@item.Id" class="utf-job-listing">
 							<div class="utf-job-listing-details">
 								<div class="utf-job-listing-description">
 									<span class="dashboard-status-button utf-job-status-item green"><i class="icon-material-outline-business-center"></i> Full Time</span>

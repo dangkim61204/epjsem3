@@ -37,7 +37,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 return View(dep);
             }
         
-            return View("View404");
+            return View("View403");
 
         }
 
@@ -48,7 +48,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 return View();
             }
      
-            return View("View404");
+            return View("View403");
         }
 
         [HttpPost]
@@ -65,7 +65,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return View(department);
             }
-            return View("View404");
+            return View("View403");
         }
 
         // GET: Department/Edit/5
@@ -83,7 +83,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(department);
             }
-            return View("View404");
+            return View("View403");
 
         }
 
@@ -108,7 +108,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(department);
             }
-            return View("View404");
+            return View("View403");
 
         }
         public async Task<IActionResult> Delete(int id)
@@ -118,7 +118,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 await _departmentService.Delete(id);
                 return RedirectToAction("Index");
             }
-            return View("View404");
+            return View("View403");
         }
 
   

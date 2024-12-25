@@ -42,7 +42,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 var list = await _clientService.GetAll(page);
                 return View(list);
             }
-            return View("View404");
+            return View("View403");
          
         }
 
@@ -65,7 +65,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(client);
             }
-            return View("View404");
+            return View("View403");
           
         }
 
@@ -78,7 +78,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
                 return View();
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -111,7 +111,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
                 return View(client);
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -140,7 +140,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(client);
             }
-            return View("View404");
+            return View("View403");
          
         }
 
@@ -168,7 +168,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(client);
             }
-            return View("View404");
+            return View("View403");
         
         }
 
@@ -180,7 +180,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 await _clientService.Delete(id);
                 return RedirectToAction("Index");
             }
-            return View("View404");
+            return View("View403");
           
         }
 
