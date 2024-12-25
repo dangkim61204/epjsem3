@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	Layout = "~/Views/Shared/_LayoutPages.cshtml";
+}
+<div class="container">
+	<div class="row">
+		<div class="utf-companies-list-aera">
+			<div class="col-xl-12">
+				<div class="row">
+					@foreach(var item in Model)
+					{
+						<div class="col-xl-4 col-md-6 col-sm-12">
+							<div class="utf-company-inner-alignment">
+								<a asp-action="Details" asp-controller="Careers" asp-route-id="@item.Id" class="company">
+									<h4>@item.Title</h4>
+									<h5 class="utf-job-listing-company"><span><i class="icon-feather-briefcase"></i> @(item.Status ? "Are recruiting" : "Recruitment is over")</span></h5>
+									<p class="text-muted"><i class="icon-material-outline-access-time"></i>@item.StartDate.ToString("dd/MM/yyyy") - @item.EndDate.ToString("dd/MM/yyyy")</p>
+									<div class="utf-star-rating" data-rating="4.5"></div>
+								</a>
+							</div>
+						</div>
+					}
+					
+					
+				</div>
+			</div>
+			<!-- Pagination -->
+			<div class="clearfix"></div>
+			<div class="utf-pagination-container-aera margin-top-20 margin-bottom-40">
+				<nav class="pagination">
+					<ul>
+						<li class="utf-pagination-arrow"><a href="#" class="ripple-effect"><i class="icon-material-outline-keyboard-arrow-left"></i></a></li>
+						<li><a href="#" class="ripple-effect current-page">1</a></li>
+						<li><a href="#" class="ripple-effect">2</a></li>
+						<li><a href="#" class="ripple-effect">3</a></li>
+						<li class="utf-pagination-arrow"><a href="#" class="ripple-effect"><i class="icon-material-outline-keyboard-arrow-right"></i></a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
