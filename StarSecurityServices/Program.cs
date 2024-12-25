@@ -137,7 +137,7 @@ void SeedAdminUser(ConnectDB context)
             DepartmentId = 1, //department
             Password = Utilitie.GetMD5HashData("12345"),
             Name = "KimVanDang",
-            Avata = "",
+            Avata = "/images/admin.jpg",
             Address = "Ha Noi",
             Phone = "0987264721",
         };

@@ -20,12 +20,20 @@ namespace Business_BLL.ServiceSrv
             _context = context;
         }
 
-
-        public async Task<IEnumerable<Service>> GetAll(int page = 1)
+        public async Task<IEnumerable<Service>> GetAll()
         {
-            int limit = 3;
-            return await _context.Services.ToPagedListAsync(page, limit);
+            return await _context.Services.ToListAsync();
         }
+
+        public async Task<IEnumerable<Service>> GetAllpage(int page = 1)
+        {
+            int limit = 8;
+            return await _context.Services.OrderByDescending(b => b.Id)
+                .ToPagedListAsync(page, limit);
+        }
+
+       
+    
 
         public async Task<Service> GetById(int id)
         {
@@ -76,6 +84,6 @@ namespace Business_BLL.ServiceSrv
             await _context.SaveChangesAsync();
         }
 
-   
+  
     }
 }

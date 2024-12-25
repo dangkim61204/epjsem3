@@ -24,11 +24,8 @@
                             <thead class="table-light">
                                 <tr>
                                    
-                                    <th scope="col">Title</th>
-                                  
+                                    <th scope="col">Title</th>                           
                                     <th scope="col">Status</th>
-                                    <th scope="col">StarDate</th>
-                                    <th scope="col">EndDate</th>
                                     <th scope="col">Quantity</th>
                                     <th scope="col">Action</th>
 
@@ -37,15 +34,11 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                                    <tr>
-                                                                      
+                                    <tr>                                                                   
                                         <td>@item.Title</td>
-                                      
-                                        <td>
-                                            @(item.Status ? "Đang tuyển" : "Không tuyển")
+                                        <td class="@(item.Status ? "recruiting" : "fully-recruited")">
+                                            @(item.Status ? "Recruiting" : "Fully recruited")
                                         </td>
-                                        <td>@item.StartDate</td>
-                                        <td>@item.EndDate</td>
                                         <td>@item.Quantity</td>
 
                                         <td>
@@ -223,3 +216,15 @@
             PageClasses = new string[] { "page-link" }
         }
             )
+
+<style>
+    .recruiting {
+        background-color: green;
+        color: white;
+    }
+
+    .fully-recruited {
+        background-color: red;
+        color: white;
+    }
+</style>

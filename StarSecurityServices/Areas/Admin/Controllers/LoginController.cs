@@ -45,7 +45,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 var identity = new ClaimsIdentity(new[]
                 {
                     new Claim(ClaimTypes.Name, emp.Username),
-                    new Claim(ClaimTypes.Surname, emp.Avata),
+                    new Claim("Avata", emp.Avata),
                     new Claim(ClaimTypes.Role, emp.Role.Name)
                 }, "CookieAuthentication");
 

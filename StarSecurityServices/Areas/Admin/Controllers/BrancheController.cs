@@ -26,11 +26,11 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
 
         // GET: Admin/Branche
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff"))
             {
-                var br = await _brancheService.GetAll();
+                var br = await _brancheService.GetAll(page);
                 return View(br);
             }
 
@@ -58,7 +58,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    
+                  
                     await _brancheService.Add(branche);
                     return RedirectToAction(nameof(Index));
                 }

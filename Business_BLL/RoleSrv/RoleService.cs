@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Business_BLL.RoleSrv
 {
@@ -21,6 +22,12 @@ namespace Business_BLL.RoleSrv
             return await _context.Roles.ToListAsync();
         }
 
+        public async Task<IEnumerable<Role>> GetAllpage(int page=1)
+        {
+            int limit = 4;
+            return await _context.Roles.OrderByDescending(b => b.Id)
+                .ToPagedListAsync(page, limit);
+        }
         public async Task<Role> GetById(int id)
         {
             var role = await _context.Roles.FindAsync(id);

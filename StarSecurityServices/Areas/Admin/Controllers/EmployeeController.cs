@@ -39,7 +39,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff"))
             {
-                var emp = await _employeeService.GetAll(page);
+                var emp = await _employeeService.GetAllpage(page);
                 return View(emp);
             }
            return View("View404");
@@ -60,7 +60,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 {
                     return NotFound();
                 }
-                ViewBag.dep = new SelectList(await _departmentService.GetAll(page), "Id", "Name");
+                ViewBag.dep = new SelectList(await _departmentService.GetAll(), "Id", "Name");
                 ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
 
                 return View(employee);
@@ -70,11 +70,11 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Employees/Create
-        public async Task<IActionResult> Create(int page=1)
+        public async Task<IActionResult> Create()
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager") )
             {
-                ViewBag.dep = new SelectList(await _departmentService.GetAll(page), "Id", "Name");
+                ViewBag.dep = new SelectList(await _departmentService.GetAll(), "Id", "Name");
                 ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
 
                 return View();
@@ -85,7 +85,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Employee employee, IFormFile? filePicture, int page=1)
+        public async Task<IActionResult> Create(Employee employee, IFormFile? filePicture)
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
@@ -128,7 +128,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                         ModelState.AddModelError("", $"Error adding employee: {ex.Message}");
                     }
                 }
-                ViewBag.dep = new SelectList(await _departmentService.GetAll(page), "Id", "Name");
+                ViewBag.dep = new SelectList(await _departmentService.GetAll(), "Id", "Name");
                 ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
                 return View(employee);
             }
@@ -148,7 +148,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 {
                     return NotFound();
                 }
-                ViewBag.dep = new SelectList(await _departmentService.GetAll(page), "Id", "Name");
+                ViewBag.dep = new SelectList(await _departmentService.GetAll(), "Id", "Name");
                 ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
              
 
@@ -181,17 +181,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                     }
                     employee.Avata = "/images/" + filePicture.FileName;
                 }
-                //// Nếu là Manager, giữ nguyên Role ban đầu
-                //if (User.IsInRole("Manager"))
-                //{
-                //    var eplRole = await _employeeService.GetById(id);
-                //    if (eplRole == null)
-                //    {
-                //        return NotFound();
-                //    }
-                //    employee.RoleId = eplRole.RoleId; // Giữ Role cũ
-
-                //}
+           
 
                 if (ModelState.IsValid)
                 {
@@ -209,7 +199,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                     return RedirectToAction("Index");
 
                 }
-                ViewBag.dep = new SelectList(await _departmentService.GetAll(page), "Id", "Name");
+                ViewBag.dep = new SelectList(await _departmentService.GetAll(), "Id", "Name");
                 ViewBag.role = new SelectList(await _roleService.GetAll(), "Id", "Name");
            
                 return View(employee);
