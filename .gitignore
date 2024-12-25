@@ -37,8 +37,6 @@ ScaffoldingReadMe.txt
 # Ignore packages folder
 /packages/
 /.vs/
-/StarSecurityServices/
-/Business_BLL/
 
 # Ignore the project-specific NuGet config
 .nuget/
