@@ -35,9 +35,6 @@ builder.Services.AddScoped<IVacancie, VacancieService>();
 builder.Services.AddScoped<IBranche, BrancheService>();
 
 
-
-
-
 //c?u hình xác th?c ng??i dùng b?ng Cookie
 builder.Services.AddAuthentication("CookieAuthenication").AddCookie("CookieAuthenication", options =>
 {
@@ -100,8 +97,16 @@ app.MapControllerRoute(
 app.Run();
 void SeedAdminUser(ConnectDB context)
 {
-    // Ensure Admin Department exists
-    var department = context.Departments.FirstOrDefault(d => d.Name == "Admin");
+	context.Database.Migrate();
+    
+	// Đọc file SQL script
+	var sqlScript = File.ReadAllText("StarSercurityService.sql");
+
+	// Thực thi SQL script
+	context.Database.ExecuteSqlRaw(sqlScript);
+
+	// Ensure Admin Department exists
+	var department = context.Departments.FirstOrDefault(d => d.Name == "Admin");
     if (department == null)
     {
         department = new Department
@@ -145,7 +150,9 @@ void SeedAdminUser(ConnectDB context)
         context.Employees.Add(admin);
         context.SaveChanges();
     }
-}
 
+
+
+}
 
 
