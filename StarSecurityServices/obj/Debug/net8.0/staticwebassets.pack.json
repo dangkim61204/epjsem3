@@ -4029,6 +4029,10 @@
       "PackagePath": "staticwebassets\\client\\js\\typed.js"
     },
     {
+      "Id": "D:\\epj3_mau\\epjsem3\\StarSecurityServices\\wwwroot\\css\\client.css",
+      "PackagePath": "staticwebassets\\css\\client.css"
+    },
+    {
       "Id": "D:\\epj3_mau\\epjsem3\\StarSecurityServices\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

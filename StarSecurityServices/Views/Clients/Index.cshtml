@@ -1,51 +1,108 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<Data_DAL.Entities.Client>
+@using Data_DAL.Entities
 @{
     Layout = "~/Views/Shared/_LayoutPages.cshtml";
 }
+
+@section Css {
+    <link rel="stylesheet" href="~/css/client.css" asp-append-version="true" />
+}
+
+<div class="inner_search_block_section padding-top-0 padding-bottom-40">
+    <div class="container">
+        <div class="col-md-12">
+            <form asp-action="Search" method="get">
+                <div class="utf-intro-banner-search-form-block">
+                    <div class="utf-intro-search-field-item">
+                        <i class="icon-feather-search"></i>
+                        <input id="intro-keywords" name="Titlee" value="@ViewBag.valueTitlee" type="text" placeholder="Search Clients Keywords...">
+                    </div>
+                    <div class="utf-intro-search-button">
+                        <button type="submit" class="button ripple-effect"><i class="icon-material-outline-search"></i> Search</button>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
 <section id="clients" class="py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">Our Clients</h2>
-        <p class="text-center mb-5">We take pride in serving a diverse range of clients across industries.</p>
+        <h2 class="text-center mb-4 text-primary font-weight-bold">Our Clients</h2>
+        <p class="text-center mb-5 text-muted">We take pride in serving a diverse range of clients across industries, offering tailored security services to meet their needs.</p>
 
-        <!-- Client List -->
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png" class="card-img-top card-img" alt="Client Logo">
-                    <div class="card-body">
-                        <h5 class="card-title">XYZ Industries</h5>
-                        <p class="card-text"><strong>Services Availed:</strong> Manned Guarding, Electronic Security Systems</p>
-                        <p class="card-text"><strong>Staff Assigned:</strong> John Doe (Security Supervisor), Jane Smith (Guard)</p>
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg border-0 rounded-lg overflow-hidden">
+                        <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png" class="card-img-top" alt="Client Logo">
+                        <div class="card-body">
+                            <h5 class="card-title text-center font-weight-bold text-primary">@item.Name</h5>
+                            <p class="card-text"><strong>Employee:</strong> @item.Service.ServiceName</p>
+                            <p class="card-text">
+                                <strong>Service:</strong>
+                                @if (item.ClientEmployees != null && item.ClientEmployees.Any())
+                                {
+                                    <ul>
+                                        @foreach (var clientEmployee in item.ClientEmployees)
+                                        {
+                                            <li>@clientEmployee.Employee.Name</li>
+                                        }
+                                    </ul>
+                                }
+                                else
+                                {
+                                <p>No employees linked to this client.</p>
+                                }
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png" class="card-img-top" alt="Client Logo">
-                    <div class="card-body">
-                        <h5 class="card-title">ABC Bank</h5>
-                        <p class="card-text"><strong>Services Availed:</strong> Cash Services, Manned Guarding</p>
-                        <p class="card-text"><strong>Staff Assigned:</strong> Michael Brown (Bodyguard), Alice Green (Cash Transport)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png" class="card-img-top" alt="Client Logo">
-                    <div class="card-body">
-                        <h5 class="card-title">DEF Hotel</h5>
-                        <p class="card-text"><strong>Services Availed:</strong> Manned Guarding, Fire Squad</p>
-                        <p class="card-text"><strong>Staff Assigned:</strong> Robert White (Fire Marshal), Emily Black (Guard)</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- More client cards can be added here -->
-
+            }
         </div>
     </div>
 </section>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="utf-pagination-container-aera margin-top-30 margin-bottom-60">
+            <nav class="pagination">
+                <ul>
+                    @if (ViewBag.PageNumber > 1)
+                    {
+                        <li class="utf-pagination-arrow">
+                            <a href="@Url.Action("Search", new { Title = ViewBag.valueTitlee, pageNumber = ViewBag.PageNumber - 1, pageSize = ViewBag.PageSize })">
+                                <i class="icon-material-outline-keyboard-arrow-left"></i>
+                            </a>
+                        </li>
+                    }
+
+                    @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                    {
+                        <li>
+                            <a href="@Url.Action("Search", new { Title = ViewBag.valueTitlee, pageNumber = i, pageSize = ViewBag.PageSize })" class="@(i == ViewBag.PageNumber ? "current-page" : "")">@i</a>
+                        </li>
+                    }
+
+                    @if (ViewBag.PageNumber < ViewBag.TotalPages)
+                    {
+                        <li class="utf-pagination-arrow">
+                            <a href="@Url.Action("Search", new { Title = ViewBag.valueTitlee, pageNumber = ViewBag.PageNumber + 1, pageSize = ViewBag.PageSize })">
+                                <i class="icon-material-outline-keyboard-arrow-right"></i>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+</style>

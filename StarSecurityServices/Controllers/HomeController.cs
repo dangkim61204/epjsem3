@@ -25,10 +25,11 @@ namespace StarSecurityServices.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.Title = "Home";
-			ViewBag.listbranche = await _brancheService.GetAll();
             var branche = await _brancheService.GetAll();
+			ViewBag.listbranche = branche.Take(6);
 			ViewBag.BrancheCount = branche.Count();
 			var vacancies = await _vacancieService.GetAll();
+			vacancies = vacancies.OrderByDescending(v => v.EndDate).Take(6).ToList();
 			ViewBag.VacancyCount = vacancies.Count();
 			ViewBag.TotalQuantity = vacancies.Sum(v => v.Quantity);
 			return View(vacancies);

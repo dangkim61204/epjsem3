@@ -92,7 +92,7 @@
 				<div class="utf-listings-container-part compact-list-layout">
 					@foreach (var item in ViewBag.firstFiveVacancies)
 					{
-						<a href="single-job-page.html" class="utf-job-listing">
+						<a asp-action="Details" asp-controller="Careers" asp-route-id="@item.Id" class="utf-job-listing">
 							<div class="utf-job-listing-details">
 								<div class="utf-job-listing-description">
 									<span class="dashboard-status-button utf-job-status-item green"><i class="icon-material-outline-business-center"></i> Full Time</span>
@@ -106,7 +106,7 @@
 									</div>
 								</div>
 							</div>
-							<span class="bookmark-icon"></span>
+							
 						</a>
 					}
 					
@@ -213,7 +213,7 @@
 
 				<div class="utf-sidebar-widget-item">
 					<div class="utf-detail-banner-add-section">
-						<a href="#"><img src="/client//client/images/banner-add-2.jpg" alt="banner-add-2" /></a>
+						<a href="#"><img src="/client/images/banner-add-2.jpg" alt="banner-add-2" /></a>
 					</div>
 				</div>
 			</div>

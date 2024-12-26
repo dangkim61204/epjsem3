@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vpcs7+X8FZMOQ+WCLJSy1VOWHMvF5Iz0vGgypcAgGu0=",
+  "Hash": "b08BxbmfH0n6sogifv57LSxgAgYbWvgFSaZZLL2UhEc=",
   "Source": "StarSecurityServices",
   "BasePath": "_content/StarSecurityServices",
   "Mode": "Default",
@@ -19167,6 +19167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\client\\js\\typed.js"
+    },
+    {
+      "Identity": "D:\\epj3_mau\\epjsem3\\StarSecurityServices\\wwwroot\\css\\client.css",
+      "SourceId": "StarSecurityServices",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\epj3_mau\\epjsem3\\StarSecurityServices\\wwwroot\\",
+      "BasePath": "_content/StarSecurityServices",
+      "RelativePath": "css/client.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\client.css"
     },
     {
       "Identity": "D:\\epj3_mau\\epjsem3\\StarSecurityServices\\wwwroot\\css\\site.css",
