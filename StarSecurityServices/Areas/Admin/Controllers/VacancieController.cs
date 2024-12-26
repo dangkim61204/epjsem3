@@ -28,7 +28,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 return View(await _vacancieService.GetAll(page));
             }
-           return View("View404");
+           return View("View403");
         }
 
         // GET: Admin/Vacancie/Details/5
@@ -50,7 +50,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(vacancie);
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -63,7 +63,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View();
             }
-            return View("View404");
+            return View("View403");
             
         }
 
@@ -88,7 +88,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return View(vacancie);
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -109,7 +109,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return View(vacancie);
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -138,7 +138,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return View(vacancie);
             }
-            return View("View404");
+            return View("View403");
        
         }
 
@@ -149,7 +149,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 await _vacancieService.Delete(id);
                 return RedirectToAction("Index");
             }
-            return View("View404");
+            return View("View403");
 
         }
     }

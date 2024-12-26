@@ -26,7 +26,11 @@ namespace Business_BLL.VacancieSrv
                 .ToPagedListAsync(page, limit);
         }
 
-        public async Task<Vacancie> GetById(int id)
+		public async Task<IEnumerable<Vacancie>> GetAllPage()
+		{
+			return await _context.Vacancies.OrderByDescending(b => b.Id).ToListAsync();
+		}
+		public async Task<Vacancie> GetById(int id)
         {
             var vacancie = await _context.Vacancies.FindAsync(id);
 
@@ -76,6 +80,6 @@ namespace Business_BLL.VacancieSrv
             await _context.SaveChangesAsync();
         }
 
-
-    }
+		
+	}
 }
