@@ -21,7 +21,7 @@ namespace StarSecurityServices.Controllers
             ViewBag.Title = "Clients";
             ViewBag.valueTitlee = Titlee;
 
-            var clients = await _clientService.GetAll() ?? new List<Client>();
+            var clients = await _clientService.GetAll(pageNumber) ?? new List<Client>();
 
             return View("Index", PaginateClients(clients.ToList(), pageNumber, pageSize, Titlee));
         }
@@ -29,7 +29,7 @@ namespace StarSecurityServices.Controllers
         public async Task<IActionResult> Search(string Titlee, int pageNumber = 1, int pageSize = 6)
         {
             ViewBag.Title = "Search Clients";
-            var clients = await _clientService.GetAll() ?? new List<Client>();
+            var clients = await _clientService.GetAll(pageNumber) ?? new List<Client>();
 
             var filteredClients = string.IsNullOrEmpty(Titlee)
                 ? clients

@@ -1,29 +1,26 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-	Layout = "~/Views/Shared/_LayoutPages.cshtml";
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPages.cshtml";
 }
 <!-- Search Jobs Start -->
 <div class="inner_search_block_section padding-top-0 padding-bottom-40">
-	<div class="container">
-		<div class="col-md-12">
-			<form asp-action="Search" method="get">
-				<div class="utf-intro-banner-search-form-block">
-					<div class="utf-intro-search-field-item">
-						<i class="icon-feather-search"></i>
-						<input id="intro-keywords" name="Titlee" value="@ViewBag.valueTitlee" type="text" placeholder="Search Jobs Keywords...">
-					</div>
-					<div class="utf-intro-search-button">
-						<button type="submit" class="button ripple-effect"><i class="icon-material-outline-search"></i> Search</button>
-					</div>
-				</div>
-			</form>
-			
-		</div>
-	</div>
+    <div class="container">
+        <div class="col-md-12">
+            <form asp-action="Search" method="get">
+                <div class="utf-intro-banner-search-form-block">
+                    <div class="utf-intro-search-field-item">
+                        <i class="icon-feather-search"></i>
+                        <input id="intro-keywords" name="Titlee" value="@ViewBag.valueTitlee" type="text" placeholder="Search Jobs Keywords...">
+                    </div>
+                    <div class="utf-intro-search-button">
+                        <button type="submit" class="button ripple-effect"><i class="icon-material-outline-search"></i> Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 <!-- Search Jobs End -->
+
 <!-- Page Content -->
 <div class="container">
     <div class="row">
@@ -50,6 +47,8 @@
             <div class="utf-inner-search-section-title">
                 <h4><i class="icon-material-outline-search"></i> Search Jobs Listing Results</h4>
             </div>
+
+            <!-- Sort Form -->
             <form asp-action="Sort" method="get" id="sortForm">
                 <div class="utf-notify-box-aera margin-top-15">
                     <div class="utf-switch-container-item">
@@ -57,14 +56,12 @@
                     </div>
                     <div class="sort-by">
                         <span>Sort By:</span>
-                        @* <select class="selectpicker hide-tick" name="Sort" asp-items="ViewBag.SortOptions">
+                        @* <select class="selectpicker hide-tick" name="sort" id="sortSelect">
                             <option value="A to Z" @(ViewBag.Sort == "A to Z" ? "selected" : "")>A to Z</option>
                             <option value="Newest" @(ViewBag.Sort == "Newest" ? "selected" : "")>Newest</option>
                             <option value="Oldest" @(ViewBag.Sort == "Oldest" ? "selected" : "")>Oldest</option>
                             <option value="Random" @(ViewBag.Sort == "Random" ? "selected" : "")>Random</option>
                         </select> *@
-
-
                     </div>
                 </div>
             </form>
@@ -133,11 +130,10 @@
 </div>
 
 @section Scripts {
-	<script>
-		// Listen for changes on the sorting dropdown and submit the form
-		document.getElementById('sortSelect').addEventListener('change', function () {
-			document.getElementById('sortForm').submit();
-		});
-	</script>
-	
+    <script>
+        // Listen for changes on the sorting dropdown and submit the form
+        document.getElementById('sortSelect').addEventListener('change', function () {
+            document.getElementById('sortForm').submit();
+        });
+    </script>
 }
