@@ -61,12 +61,12 @@ namespace Business_BLL.ClientSrv
                         var clientEmployee = new ClientEmployee
                         {
                             ClientId = client.Id,
-                            EmployeeId = employee.Code  // Đảm bảo là EmployeeId chứ không phải đối tượng employee
+                            EmployeeId = employee.Code  
                         };
-                        _context.clientEmployees.Add(clientEmployee);  // Thêm vào bảng ClientEmployee
+                        _context.clientEmployees.Add(clientEmployee);  
                     }
                 }
-                await _context.SaveChangesAsync();  // Lưu bảng ClientEmployee
+                await _context.SaveChangesAsync();  
             }
 
         }
@@ -91,6 +91,12 @@ namespace Business_BLL.ClientSrv
             var ClientEmployees = _context.clientEmployees
                 .Where(ce => ce.ClientId == client.Id)
                 .ToList();
+
+            var currentEmployeeIds = ClientEmployees.Select(ce => ce.EmployeeId).ToList();
+            if (!employeeIds.Except(currentEmployeeIds).Any() && !currentEmployeeIds.Except(employeeIds).Any())
+            {
+                return; // Không có thay đổi, thoát khỏi phương thức
+            }
 
             // Xóa những Employee không còn trong danh sách mới
             var toRemove = ClientEmployees

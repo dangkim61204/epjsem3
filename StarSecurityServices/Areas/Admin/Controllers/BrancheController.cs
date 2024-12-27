@@ -60,6 +60,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 {
                   
                     await _brancheService.Add(branche);
+                    TempData["msg"] = "Add new Branche successfully";
+                    TempData["AlertType"] = "success";
                     return RedirectToAction(nameof(Index));
                 }
                 return View(branche);
@@ -104,6 +106,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 {
                    
                     await _brancheService.Update(branche);
+                    TempData["msg"] = "Edit Branche successfully";
+                    TempData["AlertType"] = "success";
                     return RedirectToAction(nameof(Index));
                 }
                 return View(branche);
@@ -117,6 +121,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             if (User.IsInRole("Admin") || User.IsInRole("Manager") )
             {
                 await _brancheService.Delete(id);
+                TempData["msg"] = "Delete Branche successfully";
+                TempData["AlertType"] = "success";
                 return RedirectToAction("Index");
             }
             return View("View403");

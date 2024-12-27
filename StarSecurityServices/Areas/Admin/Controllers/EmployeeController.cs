@@ -46,7 +46,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Employees/Details/5
-        public async Task<IActionResult> Details(int id, int page = 1)
+        public async Task<IActionResult> Details(int id)
         {
             if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff"))
             {
@@ -121,6 +121,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                     {
 
                         await _employeeService.Add(employee);
+                        TempData["msg"] = "Add new Employee successfully";
+                        TempData["AlertType"] = "success";
                         return RedirectToAction(nameof(Index));
                     }
                     catch (Exception ex)
@@ -196,6 +198,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                     }
                     await _employeeService.Update(employee);
+                    TempData["msg"] = "Edit Employee successfully";
+                    TempData["AlertType"] = "success";
                     return RedirectToAction("Index");
 
                 }
@@ -214,6 +218,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 await _employeeService.Delete(id);
+                TempData["msg"] = "Delete Employee successfully";
+                TempData["AlertType"] = "success";
                 return RedirectToAction("Index");
             }
             return View("View403");

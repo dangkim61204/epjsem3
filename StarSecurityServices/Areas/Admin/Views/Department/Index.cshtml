@@ -5,6 +5,20 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
+<script>
+    const message = '@TempData["msg"]';
+    const alertType = '@TempData["AlertType"]';
+
+    if (message) {
+        Swal.fire({
+            icon: alertType || 'info',
+            title: 'Notification',
+            text: message,
+        });
+    }
+</script>
+
+
  
 <h1>List of Department</h1>
 <h1>@ViewBag.ErrorMessage</h1>
@@ -13,8 +27,8 @@
 <div class="row">
     <div class="col-xl-12">
         <div class="card">
-      
 
+            
             <div class="card-body">
               
                 <p>
@@ -56,6 +70,7 @@
 </div><!-- end row -->
 
 </div>
+
 @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
         new X.PagedList.Web.Common.PagedListRenderOptions
     {

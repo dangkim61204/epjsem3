@@ -5,6 +5,21 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
+
+<script>
+    const message = '@TempData["msg"]';
+    const alertType = '@TempData["AlertType"]';
+
+    if (message) {
+        Swal.fire({
+            icon: alertType || 'info',
+            title: 'Notification',
+            text: message,
+        });
+    }
+</script>
+
+
 <h1>List of Service</h1>
 
 <p>

@@ -82,7 +82,9 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                     }
 
                     await _vacancieService.Add(vacancie);
-                        return RedirectToAction(nameof(Index));
+                    TempData["msg"] = "Add new Vacancie successfully";
+                    TempData["AlertType"] = "success";
+                    return RedirectToAction(nameof(Index));
                     
                    
                 }
@@ -134,6 +136,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                     }
 
                     await _vacancieService.Update(vacancie);
+                    TempData["msg"] = "Edit Vacancie successfully";
+                    TempData["AlertType"] = "success";
                     return RedirectToAction(nameof(Index));
                 }
                 return View(vacancie);
@@ -147,6 +151,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             if (User.IsInRole("Admin") || User.IsInRole("Manager") )
             {
                 await _vacancieService.Delete(id);
+                TempData["msg"] = "Delete Vacancie successfully";
+                TempData["AlertType"] = "success";
                 return RedirectToAction("Index");
             }
             return View("View403");

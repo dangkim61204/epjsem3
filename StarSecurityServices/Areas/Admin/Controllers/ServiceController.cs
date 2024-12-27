@@ -79,7 +79,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 if (ModelState.IsValid)
                 {
                     await _serviceSrv.Add(service);
-
+                    TempData["msg"] = "Add new Service successfully";
+                    TempData["AlertType"] = "success";
                     return RedirectToAction(nameof(Index));
                 }
                 return View(service);
@@ -125,7 +126,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 {
 
                     await _serviceSrv.Update(service);
-
+                    TempData["msg"] = "Edit Service successfully";
+                    TempData["AlertType"] = "success";
                     return RedirectToAction(nameof(Index));
                 }
                 return View(service);
@@ -140,6 +142,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 await _serviceSrv.Delete(id);
+                TempData["msg"] = "Delete Service successfully";
+                TempData["AlertType"] = "success";
                 return RedirectToAction("Index");
             }
             return View("View403");

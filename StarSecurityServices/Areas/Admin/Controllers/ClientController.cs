@@ -98,6 +98,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                     {
 
                         await _clientService.Add(client, emplyeeIds);
+                        TempData["msg"] = "Add new Client successfully";
+                        TempData["AlertType"] = "success";
                         return RedirectToAction(nameof(Index));
                     }
                     catch (Exception ex)
@@ -158,7 +160,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 if (ModelState.IsValid)
                 {
                     await _clientService.Update(client, employeeIds);
-
+                    TempData["msg"] = "Edit Client successfully";
+                    TempData["AlertType"] = "success";
                     return RedirectToAction(nameof(Index));
                 }
           
@@ -178,6 +181,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 await _clientService.Delete(id);
+                TempData["msg"] = "Delete Client successfully";
+                TempData["AlertType"] = "success";
                 return RedirectToAction("Index");
             }
             return View("View403");

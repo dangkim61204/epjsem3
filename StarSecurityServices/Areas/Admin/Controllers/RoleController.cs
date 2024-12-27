@@ -56,6 +56,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 if (ModelState.IsValid)
                 {           
                     await _roleService.Add(role);
+                    TempData["msg"] = "Add new Roles successfully";
+                    TempData["AlertType"] = "success";
                     return RedirectToAction("Index");
                 }
                 return View(role);
@@ -70,6 +72,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             if (User.IsInRole("Admin"))
             {
                 await _roleService.Delete(id);
+                TempData["msg"] = "Delete Roles successfully";
+                TempData["AlertType"] = "success";
                 return RedirectToAction("Index");
             }
             return View("View403");
