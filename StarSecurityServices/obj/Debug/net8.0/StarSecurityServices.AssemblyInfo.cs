@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StarSecurityServices")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+255044788e7c717413a48e1558ac56f5abdc5312")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a3856198d17b25ebdc766a8db492e52f1143429")]
 [assembly: System.Reflection.AssemblyProductAttribute("StarSecurityServices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StarSecurityServices")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
