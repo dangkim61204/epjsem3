@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Business_BLL.BrancheSrv
 {
@@ -17,9 +18,16 @@ namespace Business_BLL.BrancheSrv
         {
             _context = context;
         }
-        public async Task<IEnumerable<Branche>> GetAll()
+        public async  Task<IEnumerable<Branche>> GetAll(int page = 1)
         {
-            return await _context.Branches.ToListAsync();
+            int limit = 8; 
+
+            
+            var branches = await  _context.Branches
+                .OrderByDescending(b => b.Id) 
+                .ToPagedListAsync(page, limit); 
+
+            return branches;
         }
 
         public async Task<Branche> GetById(int id)
@@ -35,7 +43,8 @@ namespace Business_BLL.BrancheSrv
         }
         public async Task Add(Branche branche)
         {
-             _context.Branches.Add(branche);
+            
+            _context.Branches.Add(branche);
             await _context.SaveChangesAsync();
         }
 
@@ -60,7 +69,7 @@ namespace Business_BLL.BrancheSrv
         {
             if (id == null)
             {
-                throw new Exception("not found");
+                throw new Exception("Branche id not found");
             }
 
             var br = await _context.Branches.SingleOrDefaultAsync(x => x.Id == id);

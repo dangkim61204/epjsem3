@@ -25,14 +25,14 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             _roleService = roleService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page =1)
         {
             if (User.IsInRole("Admin")) 
             {
-                var role = await _roleService.GetAll();
+                var role = await _roleService.GetAllpage(page);
                 return View(role);
             }
-            return View("View404");
+            return View("View403");
             
         }
 
@@ -42,7 +42,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 return View();
             }
-            return View("View404");
+            return View("View403");
             
         }
 
@@ -54,13 +54,13 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             if (User.IsInRole("Admin"))
             {
                 if (ModelState.IsValid)
-                {
+                {           
                     await _roleService.Add(role);
                     return RedirectToAction("Index");
                 }
                 return View(role);
             }
-            return View("View404");
+            return View("View403");
             
         }
 
@@ -72,7 +72,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 await _roleService.Delete(id);
                 return RedirectToAction("Index");
             }
-            return View("View404");
+            return View("View403");
             
         }
 

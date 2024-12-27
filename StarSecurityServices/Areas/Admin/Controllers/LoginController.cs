@@ -40,12 +40,12 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 .Include(e => e.Role)
                 .FirstOrDefault(x => x.Username == username && x.Password == md5pass);
 
-            if (emp != null && emp.Role != null)
+            if (emp != null && emp.Role != null && string.Equals(emp.Username, username, StringComparison.Ordinal))
             {
                 var identity = new ClaimsIdentity(new[]
                 {
                     new Claim(ClaimTypes.Name, emp.Username),
-                    new Claim(ClaimTypes.Surname, emp.Avata),
+                    new Claim("Avata", emp.Avata),
                     new Claim(ClaimTypes.Role, emp.Role.Name)
                 }, "CookieAuthentication");
 
@@ -55,7 +55,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            ViewBag.err = "<div class='alert alert-danger'>Incorrect login information or you do not have access.b</div>";
+            ViewBag.err = "<div class='alert alert-danger'>Incorrect login information or you do not have access.</div>";
             return View();
         }
 

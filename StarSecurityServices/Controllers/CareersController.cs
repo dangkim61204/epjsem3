@@ -17,6 +17,7 @@ namespace StarSecurityServices.Controllers
 			_brancheService = brancheService;
 		}
 
+<<<<<<< HEAD
 		public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 7, string sort = "A to Z", string Titlee = "")
 		{
 			ViewBag.Title = "Careers";
@@ -75,9 +76,17 @@ namespace StarSecurityServices.Controllers
 				default:
 					return vacancies.OrderBy(v => v.Title).ToList();
 			}
+=======
+		public async Task<IActionResult> Index(int page =1)
+		{
+			ViewBag.Title = "Careers";
+			//return View(await _vacancieService.GetAll(page));
+			return View(await _vacancieService.GetAllPage());
+
+>>>>>>> 7100eb6cc46cbc410591b681df3ddb3176e4d91f
 		}
 
-		public async Task<IActionResult> Details(int id)
+		public async Task<IActionResult> Details(int id, int page =1)
 		{
 			ViewBag.Title = "Details";
 
@@ -95,7 +104,7 @@ namespace StarSecurityServices.Controllers
 			{
 				return NotFound();
 			}
-			var vacancies = await _vacancieService.GetAll();
+			var vacancies = await _vacancieService.GetAllPage();
 			ViewBag.firstFiveVacancies = vacancies.Take(4);
 			// Return the Vacancie object directly to the View
 			return View(vacancie);
@@ -103,9 +112,24 @@ namespace StarSecurityServices.Controllers
 		public async Task<IActionResult> Browse(int pageNumber = 1, int pageSize = 7)
 		{
 			ViewBag.Title = "Browse Companies";
+<<<<<<< HEAD
+=======
+			return View(await _vacancieService.GetAllPage());
+		}
+		[HttpPost]
+		public async Task<IActionResult> Search(string Title, int pageNumber = 1, int pageSize = 10)
+		{
+			ViewBag.Title = "Careers";
+
+			// If the title is null or empty, show all vacancies
+			if (string.IsNullOrEmpty(Title))
+			{
+				return RedirectToAction("Index", new { pageNumber });
+			}
+>>>>>>> 7100eb6cc46cbc410591b681df3ddb3176e4d91f
 
 			// Fetch all vacancies first
-			var vacancies = await _vacancieService.GetAll();
+			var vacancies = await _vacancieService.GetAllPage();
 
 			// Pagination logic
 			var totalVacancies = vacancies.Count();

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Business_BLL.VacancieSrv
 {
@@ -18,12 +19,18 @@ namespace Business_BLL.VacancieSrv
         {
             _context = context;
         }
-        public async Task<IEnumerable<Vacancie>> GetAll()
+        public async Task<IEnumerable<Vacancie>> GetAll(int page = 1)
         {
-            return await _context.Vacancies.ToListAsync();
+            int limit = 8;
+            return await _context.Vacancies.OrderByDescending(b => b.Id)
+                .ToPagedListAsync(page, limit);
         }
 
-        public async Task<Vacancie> GetById(int id)
+		public async Task<IEnumerable<Vacancie>> GetAllPage()
+		{
+			return await _context.Vacancies.OrderByDescending(b => b.Id).ToListAsync();
+		}
+		public async Task<Vacancie> GetById(int id)
         {
             var vacancie = await _context.Vacancies.FindAsync(id);
 
@@ -36,15 +43,19 @@ namespace Business_BLL.VacancieSrv
         }
         public async Task Add(Vacancie vacancie)
         {
-            _context.Vacancies.Add(vacancie);
-            await _context.SaveChangesAsync();
+           
+                _context.Vacancies.Add(vacancie);
+                await _context.SaveChangesAsync();
+           
+          
+            
         }
 
 
         public async Task Update(Vacancie vacancie)
         {
             var vac = await _context.Vacancies.FindAsync(vacancie.Id);
-            if (vac != null)
+            if (vac != null )
             {
                 vac.Title = vacancie.Title;
                 vac.Description = vacancie.Description;
@@ -69,6 +80,6 @@ namespace Business_BLL.VacancieSrv
             await _context.SaveChangesAsync();
         }
 
-
-    }
+		
+	}
 }

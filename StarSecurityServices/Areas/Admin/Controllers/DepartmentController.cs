@@ -29,26 +29,26 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
-                var dep = await _departmentService.GetAll();
+                var dep = await _departmentService.GetAllpage(page);
                 return View(dep);
             }
         
-            return View("View404");
+            return View("View403");
 
         }
 
         public IActionResult Create()
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 return View();
             }
      
-            return View("View404");
+            return View("View403");
         }
 
         [HttpPost]
@@ -56,7 +56,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         public async Task<IActionResult> Create(Department department)
         {
 
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 if (ModelState.IsValid)
                 {
@@ -65,14 +65,14 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return View(department);
             }
-            return View("View404");
+            return View("View403");
         }
 
         // GET: Department/Edit/5
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                
                 var department = await _departmentService.GetById(id);
@@ -83,7 +83,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(department);
             }
-            return View("View404");
+            return View("View403");
 
         }
 
@@ -92,7 +92,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(int id, Department department)
         {
 
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
 
                 if (id != department.Id)
@@ -108,17 +108,17 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(department);
             }
-            return View("View404");
+            return View("View403");
 
         }
         public async Task<IActionResult> Delete(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 await _departmentService.Delete(id);
                 return RedirectToAction("Index");
             }
-            return View("View404");
+            return View("View403");
         }
 
   

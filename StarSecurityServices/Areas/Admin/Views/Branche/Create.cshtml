@@ -59,9 +59,8 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="mb-3">
-                                    <label asp-for="Description" class="form-label"></label>
-                                    <input asp-for="Description" type="text" class="form-control" placeholder="Description... ">
-                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                     <label asp-for="Description" class="form-label"></label>                                 
+                                    <textarea id="editor1" asp-for="Description" class="form-control" placeholder="Description..."></textarea>
                                 </div>
                             </div>
                            
@@ -145,3 +144,9 @@
 
 
 </div>
+
+@section Scripts {
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+}

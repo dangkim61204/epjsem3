@@ -9,7 +9,7 @@ namespace Business_BLL.ClientSrv
 {
     public interface IClient
     {
-        Task<IEnumerable<Client>> GetAll();
+        Task<IEnumerable<Client>> GetAll(int page);
         Task<Client> GetById(int id);
         Task Add(Client client, int[] emplyeeIds);
         Task Update(Client client, int[] emplyeeIds);

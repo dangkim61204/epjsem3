@@ -1,5 +1,5 @@
-﻿@model IEnumerable<Data_DAL.Entities.Vacancie>
-
+﻿@model X.PagedList.IPagedList<Data_DAL.Entities.Vacancie>
+@using X.PagedList.Mvc.Core;
 @{
     ViewData["Title"] = "Vacancie";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -24,11 +24,8 @@
                             <thead class="table-light">
                                 <tr>
                                    
-                                    <th scope="col">Title</th>
-                                  
+                                    <th scope="col">Title</th>                           
                                     <th scope="col">Status</th>
-                                    <th scope="col">StarDate</th>
-                                    <th scope="col">EndDate</th>
                                     <th scope="col">Quantity</th>
                                     <th scope="col">Action</th>
 
@@ -37,15 +34,11 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                                    <tr>
-                                                                      
+                                    <tr>                                                                   
                                         <td>@item.Title</td>
-                                      
-                                        <td>
-                                            @(item.Status ? "Đang tuyển" : "Không tuyển")
+                                        <td class="@(item.Status ? "recruiting" : "fully-recruited")">
+                                            @(item.Status ? "Are recruiting" : "Recruitment is over")
                                         </td>
-                                        <td>@item.StartDate</td>
-                                        <td>@item.EndDate</td>
                                         <td>@item.Quantity</td>
 
                                         <td>
@@ -215,3 +208,23 @@
         </div><!-- end card -->
     </div><!-- end col -->
 </div>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
+            new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+            LiElementClasses = new string[] { "page-item" },
+            PageClasses = new string[] { "page-link" }
+        }
+            )
+
+<style>
+    .recruiting {
+        background-color: green;
+        color: white;
+    }
+
+    .fully-recruited {
+        background-color: red;
+        color: white;
+    }
+</style>

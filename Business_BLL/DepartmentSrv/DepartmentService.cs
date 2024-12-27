@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Business_BLL.DepartmentSrv
 {
@@ -22,9 +24,18 @@ namespace Business_BLL.DepartmentSrv
         //list
         public async Task<IEnumerable<Department>> GetAll()
         {
-            return await _context.Departments.ToListAsync();
+            
+            return  await _context.Departments.ToListAsync();
+ 
+     
         }
 
+        public async Task<IEnumerable<Department>> GetAllpage(int page = 1)
+        {
+            int limit = 5;
+            return await _context.Departments.OrderByDescending(b => b.Id)
+                .ToPagedListAsync(page, limit); ;
+        }
         //getById
         public async Task<Department> GetById(int id)
         {
@@ -63,7 +74,7 @@ namespace Business_BLL.DepartmentSrv
         {
             if (id == null)
             {
-                throw new Exception("rrrrr");
+                throw new Exception("Id not found");
             }
 
             var dep = await _context.Departments
@@ -72,12 +83,12 @@ namespace Business_BLL.DepartmentSrv
 
             if (dep == null)
             {
-                throw new Exception("qqqqq");
+                throw new Exception("Department id not found");
             }
 
             if (dep.Employees != null && dep.Employees.Any())
             {
-                throw new Exception("ksfkf");
+                throw new Exception("The department's Employees list cannot contain elements.");
             }
 
             _context.Departments.Remove(dep);
@@ -85,6 +96,6 @@ namespace Business_BLL.DepartmentSrv
 
         }
 
-     
+        
     }
 }

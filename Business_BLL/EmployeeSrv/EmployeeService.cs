@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 
 namespace Business_BLL.EmployeeSrv
@@ -27,6 +28,15 @@ namespace Business_BLL.EmployeeSrv
             var emp = await connectDB.ToListAsync();
             return emp;
         }
+        public async Task<IEnumerable<Employee>> GetAllpage(int page =1)
+        {
+            int limit = 10;
+            var connectDB = _context.Employees.Include(e => e.Department).Include(e => e.Role);
+            var emp = await connectDB.OrderByDescending(b => b.Code)
+                .ToPagedListAsync(page, limit); 
+            return emp;
+        }
+       
 
         public async Task<Employee> GetById(int id)
         {
@@ -67,11 +77,7 @@ namespace Business_BLL.EmployeeSrv
                 emp.Grade = employee.Grade;
                 emp.Education = employee.Education;
                 emp.DepartmentId = employee.DepartmentId;
-                emp.Username = employee.Username;
-                if (!string.IsNullOrEmpty(employee.Password))
-                {
-                    emp.Password = Utilitie.GetMD5HashData(employee.Password);
-                }
+              
 
                 await _context.SaveChangesAsync();
 
@@ -85,13 +91,14 @@ namespace Business_BLL.EmployeeSrv
         {
             if (id == null)
             {
-                throw new KeyNotFoundException("Employee not found.");
+                throw new KeyNotFoundException("Employee id not found.");
             }
             var emp = await _context.Employees.SingleOrDefaultAsync(x => x.Code == id);
             _context.Employees.Remove(emp);
             await _context.SaveChangesAsync();
             
         }
-        
+
+     
     }
 }

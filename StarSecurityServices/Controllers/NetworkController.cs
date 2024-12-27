@@ -12,10 +12,10 @@ namespace StarSecurityServices.Controllers
 		{
 			_brancheService = brancheService;
 		}
-		public async Task<IActionResult> Index()
+		public async Task<IActionResult> Index(int page =1)
 		{
             ViewBag.Title = "Our Network";
-			var branche = await _brancheService.GetAll();
+			var branche = await _brancheService.GetAll(page);
 			return View(branche);
         }
 	}

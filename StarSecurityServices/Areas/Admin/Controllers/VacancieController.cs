@@ -22,19 +22,19 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Vacancie
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            if(User.IsInRole("Admin") || User.IsInRole("Staff"))
+            if(User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff"))
             {
-                return View(await _vacancieService.GetAll());
+                return View(await _vacancieService.GetAll(page));
             }
-           return View("View404");
+           return View("View403");
         }
 
         // GET: Admin/Vacancie/Details/5
         public async Task<IActionResult> Details(int id)
         {
-            if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Staff"))
             {
                 if (id == null)
                 {
@@ -50,7 +50,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(vacancie);
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -58,11 +58,12 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         public IActionResult Create()
         {
 
-            if (User.IsInRole("Admin") )
+            if (User.IsInRole("Admin") || User.IsInRole("Manager") )
             {
+
                 return View();
             }
-            return View("View404");
+            return View("View403");
             
         }
 
@@ -70,23 +71,31 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create( Vacancie vacancie)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 if (ModelState.IsValid)
                 {
+                    if (vacancie.StartDate > vacancie.EndDate)
+                    {
+                        ModelState.AddModelError("DateError", "StartDate cannot be after EndDate.");
+                        return View(vacancie);
+                    }
+
                     await _vacancieService.Add(vacancie);
-                    return RedirectToAction(nameof(Index));
+                        return RedirectToAction(nameof(Index));
+                    
+                   
                 }
                 return View(vacancie);
             }
-            return View("View404");
+            return View("View403");
            
         }
 
         // GET: Admin/Vacancie/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager") )
             {
                 if (id == null)
                 {
@@ -100,7 +109,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return View(vacancie);
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -109,7 +118,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id,  Vacancie vacancie)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 if (id != vacancie.Id)
                 {
@@ -118,24 +127,29 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 if (ModelState.IsValid)
                 {
+                    if (vacancie.StartDate > vacancie.EndDate)
+                    {
+                        ModelState.AddModelError("DateError", "StartDate cannot be after EndDate.");
+                        return View(vacancie);
+                    }
 
                     await _vacancieService.Update(vacancie);
                     return RedirectToAction(nameof(Index));
                 }
                 return View(vacancie);
             }
-            return View("View404");
+            return View("View403");
        
         }
 
         public async Task<IActionResult> Delete(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager") )
             {
                 await _vacancieService.Delete(id);
                 return RedirectToAction("Index");
             }
-            return View("View404");
+            return View("View403");
 
         }
     }

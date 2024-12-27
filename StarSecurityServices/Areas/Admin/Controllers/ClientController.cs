@@ -35,21 +35,21 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Client
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page =1)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
-                var list = await _clientService.GetAll();
+                var list = await _clientService.GetAll(page);
                 return View(list);
             }
-            return View("View404");
+            return View("View403");
          
         }
 
         // GET: Admin/Client/Details/5
         public async Task<IActionResult> Details(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 if (id == null)
                 {
@@ -65,20 +65,20 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 return View(client);
             }
-            return View("View404");
+            return View("View403");
           
         }
 
         // GET: Admin/Client/Create
         public async Task<IActionResult> Create()
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "ServiceName");
                 ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
                 return View();
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -87,7 +87,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Client client, int[] emplyeeIds)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "ServiceName");
                 ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
@@ -103,7 +103,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                     catch (Exception ex)
                     {
                         // Thêm thông báo lỗi khi thêm thất bại
-                        ModelState.AddModelError(string.Empty, $"Đã xảy ra lỗi khi thêm mới khách hàng: {ex.Message}");
+                        ModelState.AddModelError(string.Empty, $"An error occurred while adding a new customer.: {ex.Message}");
                     }
                 }
 
@@ -111,7 +111,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
                 return View(client);
             }
-            return View("View404");
+            return View("View403");
            
         }
 
@@ -121,7 +121,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // GET: Admin/Client/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 if (id == null)
                 {
@@ -133,20 +133,22 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 {
                     return NotFound();
                 }
-                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "Name");
-                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "code", "Name");
+    
+
+                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "ServiceName");
+                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
 
                 return View(client);
             }
-            return View("View404");
+            return View("View403");
          
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Client client, int[] emplyeeIds)
+        public async Task<IActionResult> Edit(int id, Client client, int[] employeeIds)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 if (id != client.Id)
                 {
@@ -155,28 +157,30 @@ namespace StarSecurityServices.Areas.Admin.Controllers
 
                 if (ModelState.IsValid)
                 {
-                    await _clientService.Update(client, emplyeeIds);
+                    await _clientService.Update(client, employeeIds);
 
                     return RedirectToAction(nameof(Index));
                 }
-                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "Name");
-                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "code", "Name");
+          
+
+                ViewBag.serviceId = new SelectList(await _serviceSrv.GetAll(), "Id", "ServiceName");
+                ViewBag.EmployeeSelectList = new SelectList(await _employeeService.GetAll(), "Code", "Name");
 
                 return View(client);
             }
-            return View("View404");
+            return View("View403");
         
         }
 
         // GET: Admin/Client/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
-            if (User.IsInRole("Admin"))
+            if (User.IsInRole("Admin") || User.IsInRole("Manager"))
             {
                 await _clientService.Delete(id);
                 return RedirectToAction("Index");
             }
-            return View("View404");
+            return View("View403");
           
         }
 

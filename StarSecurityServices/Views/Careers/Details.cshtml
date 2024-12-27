@@ -38,16 +38,29 @@
 				<div class="utf-boxed-list-headline-item">
 					<h3><i class="icon-material-outline-description"></i> Jobs Description</h3>
 				</div>
+<<<<<<< HEAD
 				<p>@Model.Description</p>
+=======
+				<b>Job:</b>@Model.Title
+				<br />
+				<b>Description:</b>@Model.Description
+				<br />
+				<b>Number of recruitment:</b> @Model.Quantity
+				<br />
+				<b>StartDate:</b>@Model.StartDate
+				<br />
+				<b>EndDate:</b>@Model.EndDate
+				
+>>>>>>> 7100eb6cc46cbc410591b681df3ddb3176e4d91f
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-sm-12">
-						<a href="#small-dialog" class="apply-now-button popup-with-zoom-anim margin-top-0">Apply Now <i class="icon-feather-chevron-right"></i></a>
+						<a asp-action="Details" asp-controller="Careers" class="apply-now-button popup-with-zoom-anim margin-top-0">Apply Now <i class="icon-feather-chevron-right"></i></a>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-sm-12">
-						<a href="#" class="button save-job-btn">Get Job Alerts <i class="icon-feather-chevron-right"></i></a>
+						<a asp-action="Details" asp-controller="Careers"  class="button save-job-btn">Get Job Alerts <i class="icon-feather-chevron-right"></i></a>
 					</div>
 				</div>
-				<div class="utf-detail-social-sharing margin-top-25">
+				@* <div class="utf-detail-social-sharing margin-top-25">
 					<span><strong>Social Sharing:-</strong></span>
 					<ul class="margin-top-15">
 						<li><a href="#" title="Facebook" data-tippy-placement="top"><i class="icon-brand-facebook-f"></i></a></li>
@@ -57,7 +70,7 @@
 						<li><a href="#" title="Whatsapp" data-tippy-placement="top"><i class="icon-brand-whatsapp"></i></a></li>
 						<li><a href="#" title="Pinterest" data-tippy-placement="top"><i class="icon-brand-pinterest-p"></i></a></li>
 					</ul>
-				</div>
+				</div> *@
 			</div>
 			
 			<div class="utf-boxed-list-item margin-bottom-60">
