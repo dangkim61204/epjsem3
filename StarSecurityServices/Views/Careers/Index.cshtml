@@ -1,138 +1,139 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-	Layout = "~/Views/Shared/_LayoutPages.cshtml";
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPages.cshtml";
 }
 <!-- Search Jobs Start -->
 <div class="inner_search_block_section padding-top-0 padding-bottom-40">
-	<div class="container">
-		<div class="col-md-12">
-			<form asp-action="Search" method="post">
-			<div class="utf-intro-banner-search-form-block">
-				
-					<div class="utf-intro-search-field-item">
-						<i class="icon-feather-search"></i>
-						<input id="intro-keywords" name="Title" type="text" placeholder="Search Jobs Keywords...">
-					</div>
-					<div class="utf-intro-search-button">
-						<button type="submit" class="button ripple-effect"><i class="icon-material-outline-search"></i> Search</button>
-					</div>
-			</div>
-			</form>
-			<p class="utf-trending-silver-item"><span class="utf-trending-black-item">Trending Jobs Keywords:</span> Web Designer,  Web Developer,  Graphic Designer,  PHP Developer,  IOS Developer,  Android Developer</p>
-		</div>
-	</div>
+    <div class="container">
+        <div class="col-md-12">
+            <form asp-action="Search" method="get">
+                <div class="utf-intro-banner-search-form-block">
+                    <div class="utf-intro-search-field-item">
+                        <i class="icon-feather-search"></i>
+                        <input id="intro-keywords" name="Titlee" value="@ViewBag.valueTitlee" type="text" placeholder="Search Jobs Keywords...">
+                    </div>
+                    <div class="utf-intro-search-button">
+                        <button type="submit" class="button ripple-effect"><i class="icon-material-outline-search"></i> Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 <!-- Search Jobs End -->
+
 <!-- Page Content -->
 <div class="container">
-	<div class="row">
-		<div class="col-xl-3 col-lg-4">
-			<div class="utf-sidebar-container-aera">
-				<div class="utf-sidebar-widget-item">
-					<div class="utf-quote-box utf-jobs-listing-utf-quote-box">
-						<div class="utf-quote-info">
-							<h4>Make a Difference with Online Resume!</h4>
-							<p>Your Resume in Minutes with Jobs Resume Assistant is Ready!</p>
-							
-						</div>
-					</div>
-				</div>
+    <div class="row">
+        <div class="col-xl-3 col-lg-4">
+            <div class="utf-sidebar-container-aera">
+                <div class="utf-sidebar-widget-item">
+                    <div class="utf-quote-box utf-jobs-listing-utf-quote-box">
+                        <div class="utf-quote-info">
+                            <h4>Make a Difference with Online Resume!</h4>
+                            <p>Your Resume in Minutes with Jobs Resume Assistant is Ready!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="utf-sidebar-widget-item">
+                    <div class="utf-detail-banner-add-section">
+                        <a href="#"><img src="/client/images/banner-add-2.jpg" alt="banner-add-2" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-				
-				<div class="clearfix"></div>
-				<div class="clearfix"></div>
-				
-				<div class="utf-sidebar-widget-item">
-					<div class="utf-detail-banner-add-section">
-						<a href="#"><img src="/client/images/banner-add-2.jpg" alt="banner-add-2" /></a>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="col-xl-9 col-lg-8">
+            <div class="utf-inner-search-section-title">
+                <h4><i class="icon-material-outline-search"></i> Search Jobs Listing Results</h4>
+            </div>
 
-		<div class="col-xl-9 col-lg-8">
-			<div class="utf-inner-search-section-title">
-				<h4><i class="icon-material-outline-search"></i> Search Jobs Listing Results</h4>
-			</div>
-			<div class="utf-notify-box-aera margin-top-15">
-				<div class="utf-switch-container-item">
-					<span>Showing 1–10 of 50 Jobs Results :</span>
-				</div>
-				<div class="sort-by">
-					<span>Sort By:</span>
-					<select class="selectpicker hide-tick">
-						<option>A to Z</option>
-						<option>Newest</option>
-						<option>Oldest</option>
-						<option>Random</option>
-					</select>
-				</div>
-			</div>
+            <!-- Sort Form -->
+            <form asp-action="Sort" method="get" id="sortForm">
+                <div class="utf-notify-box-aera margin-top-15">
+                    <div class="utf-switch-container-item">
+                        <span>Showing @ViewBag.TotalVacancies Results</span>
+                    </div>
+                    <div class="sort-by">
+                        <span>Sort By:</span>
+                        @* <select class="selectpicker hide-tick" name="sort" id="sortSelect">
+                            <option value="A to Z" @(ViewBag.Sort == "A to Z" ? "selected" : "")>A to Z</option>
+                            <option value="Newest" @(ViewBag.Sort == "Newest" ? "selected" : "")>Newest</option>
+                            <option value="Oldest" @(ViewBag.Sort == "Oldest" ? "selected" : "")>Oldest</option>
+                            <option value="Random" @(ViewBag.Sort == "Random" ? "selected" : "")>Random</option>
+                        </select> *@
+                    </div>
+                </div>
+            </form>
 
-			<div class="utf-listings-container-part compact-list-layout margin-top-35">
-				@foreach(var item in Model)
-				{
-					<a asp-action="Details" asp-controller="Careers" asp-route-id="@item.Id" class="utf-job-listing">
-						<div class="utf-job-listing-details">
-							<div class="utf-job-listing-description">
-								<span class="dashboard-status-button utf-job-status-item green"><i class="icon-material-outline-business-center"></i> Full Time</span>
-								<h3 class="utf-job-listing-title">@item.Title <span class="utf-verified-badge" title="Verified Employer" data-tippy-placement="top"></span></h3>
-								<div class="utf-job-listing-footer">
-									<ul>
-										<li><i class="icon-feather-briefcase"></i> @(item.Status ? "Are recruiting" : "Recruitment is over")</li>
+            <div class="utf-listings-container-part compact-list-layout margin-top-35">
+                @foreach(var item in Model)
+                {
+                    <a asp-action="Details" asp-controller="Careers" asp-route-id="@item.Id" class="utf-job-listing">
+                        <div class="utf-job-listing-details">
+                            <div class="utf-job-listing-description">
+                                <span class="dashboard-status-button utf-job-status-item green"><i class="icon-material-outline-business-center"></i> Full Time</span>
+                                <h3 class="utf-job-listing-title">@item.Title <span class="utf-verified-badge" title="Verified Employer" data-tippy-placement="top"></span></h3>
+                                <div class="utf-job-listing-footer">
+                                    <ul>
+                                        <li><i class="icon-feather-briefcase"></i> @(item.Status ? "Are recruiting" : "Recruitment is over")</li>
+                                        <li><i class="icon-material-outline-access-time"></i>@item.StartDate.ToString("dd/MM/yyyy") - @item.EndDate.ToString("dd/MM/yyyy")</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
 
-										<li><i class="icon-material-outline-access-time"></i>@item.StartDate.ToString("dd/MM/yyyy") - @item.EndDate.ToString("dd/MM/yyyy")</li>
-									</ul>
-								</div>
-							</div>
-							<span class="bookmark-icon"></span>
-						</div>
-					</a>
-				}
-				
-			</div>
+            <!-- Pagination -->
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="utf-pagination-container-aera margin-top-30 margin-bottom-60">
+                        <nav class="pagination">
+                            <ul>
+                                <!-- Previous Page Button -->
+                                @if (ViewBag.PageNumber > 1)
+                                {
+                                    <li class="utf-pagination-arrow">
+                                        <a href="@Url.Action("Search", new { Titlee = ViewBag.valueTitlee, sort = ViewBag.Sort, pageNumber = ViewBag.PageNumber - 1, pageSize = ViewBag.PageSize })">
+                                            <i class="icon-material-outline-keyboard-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                }
 
-			<!-- Pagination -->
-			<div class="clearfix"></div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="utf-pagination-container-aera margin-top-30 margin-bottom-60">
-						<nav class="pagination">
-							<ul>
-								<!-- Previous Page Button -->
-								@if (ViewBag.PageNumber > 1)
-								{
-									<li class="utf-pagination-arrow">
-										<a href="@Url.Action("Search", new { Title = Context.Request.Query["Title"], pageNumber = ViewBag.PageNumber - 1 })">
-											<i class="icon-material-outline-keyboard-arrow-left"></i>
-										</a>
-									</li>
-								}
+                                <!-- Page Number Buttons -->
+                                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                                {
+                                    <li>
+                                        <a href="@Url.Action("Search", new { Titlee = ViewBag.valueTitlee, sort = ViewBag.Sort, pageNumber = i, pageSize = ViewBag.PageSize })" class="@(i == ViewBag.PageNumber ? "current-page" : "")">@i</a>
+                                    </li>
+                                }
 
-								<!-- Page Number Buttons -->
-								@for (int i = 1; i <= ViewBag.TotalPages; i++)
-								{
-									<li>
-										<a href="@Url.Action("Search", new { Title = Context.Request.Query["Title"], pageNumber = i })" class="@(i == ViewBag.PageNumber ? "current-page" : "")">@i</a>
-									</li>
-								}
-
-								<!-- Next Page Button -->
-								@if (ViewBag.PageNumber < ViewBag.TotalPages)
-								{
-									<li class="utf-pagination-arrow">
-										<a href="@Url.Action("Search", new { Title = Context.Request.Query["Title"], pageNumber = ViewBag.PageNumber + 1 })">
-											<i class="icon-material-outline-keyboard-arrow-right"></i>
-										</a>
-									</li>
-								}
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                                <!-- Next Page Button -->
+                                @if (ViewBag.PageNumber < ViewBag.TotalPages)
+                                {
+                                    <li class="utf-pagination-arrow">
+                                        <a href="@Url.Action("Search", new { Titlee = ViewBag.valueTitlee, sort = ViewBag.Sort, pageNumber = ViewBag.PageNumber + 1, pageSize = ViewBag.PageSize })">
+                                            <i class="icon-material-outline-keyboard-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <script>
+        // Listen for changes on the sorting dropdown and submit the form
+        document.getElementById('sortSelect').addEventListener('change', function () {
+            document.getElementById('sortForm').submit();
+        });
+    </script>
+}
