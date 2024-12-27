@@ -1,0 +1,24 @@
+﻿.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+.card-footer a {
+    text-decoration: none;
+}
+
+    .card-footer a:hover {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+    }
