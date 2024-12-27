@@ -22,7 +22,6 @@
                     </div>
                 </div>
             </form>
-            
         </div>
     </div>
 </div>
@@ -40,9 +39,9 @@
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png" class="card-img-top" alt="Client Logo">
                         <div class="card-body">
                             <h5 class="card-title text-center font-weight-bold text-primary">@item.Name</h5>
-                            <p class="card-text"><strong>Employee:</strong> @item.Service.ServiceName</p>
+                            <p class="card-text"><strong>Service:</strong> @item.Service.ServiceName</p>
                             <p class="card-text">
-                                <strong>Service:</strong>
+                                <strong>Employee:</strong>
                                 @if (item.ClientEmployees != null && item.ClientEmployees.Any())
                                 {
                                     <ul>
@@ -73,7 +72,7 @@
                     @if (ViewBag.PageNumber > 1)
                     {
                         <li class="utf-pagination-arrow">
-                            <a href="@Url.Action("Search", new { Title = ViewBag.valueTitlee, pageNumber = ViewBag.PageNumber - 1, pageSize = ViewBag.PageSize })">
+                            <a href="@Url.Action("Search", new { Titlee = ViewBag.valueTitlee, pageNumber = ViewBag.PageNumber - 1, pageSize = ViewBag.PageSize })">
                                 <i class="icon-material-outline-keyboard-arrow-left"></i>
                             </a>
                         </li>
@@ -82,14 +81,14 @@
                     @for (int i = 1; i <= ViewBag.TotalPages; i++)
                     {
                         <li>
-                            <a href="@Url.Action("Search", new { Title = ViewBag.valueTitlee, pageNumber = i, pageSize = ViewBag.PageSize })" class="@(i == ViewBag.PageNumber ? "current-page" : "")">@i</a>
+                            <a href="@Url.Action("Search", new { Titlee = ViewBag.valueTitlee, pageNumber = i, pageSize = ViewBag.PageSize })" class="@(i == ViewBag.PageNumber ? "current-page" : "")">@i</a>
                         </li>
                     }
 
                     @if (ViewBag.PageNumber < ViewBag.TotalPages)
                     {
                         <li class="utf-pagination-arrow">
-                            <a href="@Url.Action("Search", new { Title = ViewBag.valueTitlee, pageNumber = ViewBag.PageNumber + 1, pageSize = ViewBag.PageSize })">
+                            <a href="@Url.Action("Search", new { Titlee = ViewBag.valueTitlee, pageNumber = ViewBag.PageNumber + 1, pageSize = ViewBag.PageSize })">
                                 <i class="icon-material-outline-keyboard-arrow-right"></i>
                             </a>
                         </li>

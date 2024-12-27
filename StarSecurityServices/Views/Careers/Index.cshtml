@@ -3,28 +3,7 @@
 }
 <!-- Search Jobs Start -->
 <div class="inner_search_block_section padding-top-0 padding-bottom-40">
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<div class="container">
-		<div class="col-md-12">
-			<form asp-action="Search" method="post">
-			<div class="utf-intro-banner-search-form-block">
-				
-					<div class="utf-intro-search-field-item">
-						<i class="icon-feather-search"></i>
-						<input id="intro-keywords" name="Title" type="text" placeholder="Search Jobs Keywords...">
-					</div>
-					<div class="utf-intro-search-button">
-						<button type="submit" class="button ripple-effect"><i class="icon-material-outline-search"></i> Search</button>
-					</div>
-			</div>
-			</form>
-			
-		</div>
-	</div>
-=======
-=======
->>>>>>> origin
+
     <div class="container">
         <div class="col-md-12">
             <form asp-action="Search" method="get">
@@ -40,10 +19,7 @@
             </form>
         </div>
     </div>
-<<<<<<< HEAD
->>>>>>> origin
-=======
->>>>>>> origin
+
 </div>
 <!-- Search Jobs End -->
 
@@ -69,42 +45,25 @@
             </div>
         </div>
 
-        <div class="col-xl-9 col-lg-8">
-            <div class="utf-inner-search-section-title">
-                <h4><i class="icon-material-outline-search"></i> Search Jobs Listing Results</h4>
-            </div>
+  
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 		<div class="col-xl-9 col-lg-8">
 			<div class="utf-inner-search-section-title">
 				<h4><i class="icon-material-outline-search"></i> Search Jobs Listing Results</h4>
 			</div>
 			
-=======
-=======
->>>>>>> origin
+
+
             <!-- Sort Form -->
             <form asp-action="Sort" method="get" id="sortForm">
                 <div class="utf-notify-box-aera margin-top-15">
                     <div class="utf-switch-container-item">
                         <span>Showing @ViewBag.TotalVacancies Results</span>
                     </div>
-                    <div class="sort-by">
-                        <span>Sort By:</span>
-                        @* <select class="selectpicker hide-tick" name="sort" id="sortSelect">
-                            <option value="A to Z" @(ViewBag.Sort == "A to Z" ? "selected" : "")>A to Z</option>
-                            <option value="Newest" @(ViewBag.Sort == "Newest" ? "selected" : "")>Newest</option>
-                            <option value="Oldest" @(ViewBag.Sort == "Oldest" ? "selected" : "")>Oldest</option>
-                            <option value="Random" @(ViewBag.Sort == "Random" ? "selected" : "")>Random</option>
-                        </select> *@
-                    </div>
+                   
                 </div>
             </form>
-<<<<<<< HEAD
->>>>>>> origin
-=======
->>>>>>> origin
+
 
             <div class="utf-listings-container-part compact-list-layout margin-top-35">
                 @foreach(var item in Model)
